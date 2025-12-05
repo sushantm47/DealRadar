@@ -1,0 +1,9 @@
+pymysql
+cryptography
+cloudscraper
+beautifulsoup4
+pandas
+flask
+numpy
+python-dotenv
+requests

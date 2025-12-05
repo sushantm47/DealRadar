@@ -1,0 +1,725 @@
+2025-12-05 00:11:12 - INFO - 
+============================================================
+2025-12-05 00:11:12 - INFO - 🚀 SERVER RESTART | Session ID: 0f414895 | Time: 2025-12-05 00:11:12.729877
+2025-12-05 00:11:12 - INFO - ============================================================
+
+2025-12-05 00:11:12 - INFO - [0f414895] Database initialized successfully.
+2025-12-05 00:11:12 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 00:11:12 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-05 00:11:12 - INFO -  * Restarting with watchdog (windowsapi)
+2025-12-05 00:11:14 - INFO - 
+============================================================
+2025-12-05 00:11:14 - INFO - 🚀 SERVER RESTART | Session ID: d3135c24 | Time: 2025-12-05 00:11:14.098614
+2025-12-05 00:11:14 - INFO - ============================================================
+
+2025-12-05 00:11:14 - INFO - [d3135c24] Database initialized successfully.
+2025-12-05 00:11:14 - WARNING -  * Debugger is active!
+2025-12-05 00:11:14 - INFO -  * Debugger PIN: 362-277-283
+2025-12-05 00:11:19 - INFO - 127.0.0.1 - - [05/Dec/2025 00:11:19] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 00:11:19 - INFO - 127.0.0.1 - - [05/Dec/2025 00:11:19] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 00:11:23 - INFO - [d3135c24] Auto-detecting details for: Apple ipad
+2025-12-05 00:11:23 - INFO - [d3135c24] [BingShopping] Requesting: https://www.bing.com/shop?q=Apple+ipad
+2025-12-05 00:11:23 - INFO - [d3135c24] [BingShopping] Status: 200, Size: 97328 bytes
+2025-12-05 00:11:23 - WARNING - [d3135c24] [DEBUG] BingShopping Failed. Title: Apple ipad - Search Shopping
+2025-12-05 00:11:23 - WARNING - [d3135c24] [DEBUG] Snippet: Apple ipad - Search Shopping AllImagesVideosMapsNewsShoppingCashback storesCashback accountMy collectionsMoreFlightsTravelNotebookCompare ProductsChoose upto 5 items for side by side feature comparisonWishlistWishlistTrack priceGo to collections✕Manage notification preferenceVisit Interest ManagerNo...
+2025-12-05 00:11:23 - INFO - [d3135c24] Bing failed, trying eBay...
+2025-12-05 00:11:23 - INFO - [d3135c24] [eBayDiscovery] Requesting: https://www.ebay.com/sch/i.html?_nkw=Apple+ipad&_sop=12
+2025-12-05 00:12:34 - ERROR - [d3135c24] [eBayDiscovery] Connection Error: HTTPSConnectionPool(host='www.ebay.com', port=443): Max retries exceeded with url: /sch/i.html?_nkw=Apple+ipad&_sop=12 (Caused by ResponseError('too many 503 error responses'))
+2025-12-05 00:12:34 - INFO - 127.0.0.1 - - [05/Dec/2025 00:12:34] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 00:12:34 - INFO - 127.0.0.1 - - [05/Dec/2025 00:12:34] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:28:09 - INFO -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\setup.py', reloading
+2025-12-05 01:28:09 - INFO -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:28:11 - INFO - 
+============================================================
+2025-12-05 01:28:11 - INFO - 🚀 SERVER RESTART | Session ID: 3c60c338 | Time: 2025-12-05 01:28:11.733644
+2025-12-05 01:28:11 - INFO - ============================================================
+
+2025-12-05 01:28:11 - INFO - [3c60c338] Database initialized successfully.
+2025-12-05 01:28:11 - WARNING -  * Debugger is active!
+2025-12-05 01:28:11 - INFO -  * Debugger PIN: 362-277-283
+2025-12-05 01:28:57 - INFO -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\scraper.py', reloading
+2025-12-05 01:28:58 - INFO -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:29:00 - INFO - 
+============================================================
+2025-12-05 01:29:00 - INFO - 🚀 SERVER RESTART | Session ID: d9832917 | Time: 2025-12-05 01:29:00.135649
+2025-12-05 01:29:00 - INFO - ============================================================
+
+2025-12-05 01:29:00 - INFO - [d9832917] Database initialized successfully.
+2025-12-05 01:29:00 - WARNING -  * Debugger is active!
+2025-12-05 01:29:00 - INFO -  * Debugger PIN: 362-277-283
+2025-12-05 01:29:05 - INFO -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\scraper.py', reloading
+2025-12-05 01:29:05 - INFO -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:29:06 - INFO - 
+============================================================
+2025-12-05 01:29:06 - INFO - 🚀 SERVER RESTART | Session ID: c154512f | Time: 2025-12-05 01:29:06.990303
+2025-12-05 01:29:06 - INFO - ============================================================
+
+2025-12-05 01:29:07 - INFO - [c154512f] Database initialized successfully.
+2025-12-05 01:29:07 - WARNING -  * Debugger is active!
+2025-12-05 01:29:07 - INFO -  * Debugger PIN: 362-277-283
+2025-12-05 01:32:08,968 - 
+--- SERVER START d74b7151 ---
+
+2025-12-05 01:32:09,014 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 01:32:09,015 - [33mPress CTRL+C to quit[0m
+2025-12-05 01:32:09,032 -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:32:10,361 - 
+--- SERVER START 78524f50 ---
+
+2025-12-05 01:32:10,384 -  * Debugger is active!
+2025-12-05 01:32:10,387 -  * Debugger PIN: 362-277-283
+2025-12-05 01:32:46,807 - 127.0.0.1 - - [05/Dec/2025 01:32:46] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 01:32:46,911 - 127.0.0.1 - - [05/Dec/2025 01:32:46] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:33:00,868 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\flask\\app.py', reloading
+2025-12-05 01:33:01,098 -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:33:02,872 - 
+--- SERVER START eab4d24d ---
+
+2025-12-05 01:33:02,901 -  * Debugger is active!
+2025-12-05 01:33:02,905 -  * Debugger PIN: 362-277-283
+2025-12-05 01:34:07,680 - 127.0.0.1 - - [05/Dec/2025 01:34:07] "[35m[1mPOST /user/create_product HTTP/1.1[0m" 500 -
+2025-12-05 01:34:07,830 - 127.0.0.1 - - [05/Dec/2025 01:34:07] "GET /user/create_product?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-12-05 01:34:07,849 - 127.0.0.1 - - [05/Dec/2025 01:34:07] "GET /user/create_product?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-12-05 01:34:07,896 - 127.0.0.1 - - [05/Dec/2025 01:34:07] "GET /user/create_product?__debugger__=yes&cmd=resource&f=console.png&s=MdI4go9yv7qyXamkgPD4 HTTP/1.1" 200 -
+2025-12-05 01:34:07,907 - 127.0.0.1 - - [05/Dec/2025 01:34:07] "GET /user/create_product?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-12-05 01:36:45,377 - 
+--- SERVER START bd0419ec ---
+
+2025-12-05 01:38:35,506 - 
+============================================================
+🚀 SERVER RESTART | Session: 9bbb652f
+============================================================
+2025-12-05 01:38:35,552 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 01:38:35,553 - [33mPress CTRL+C to quit[0m
+2025-12-05 01:38:35,568 -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:38:36,858 - 
+============================================================
+🚀 SERVER RESTART | Session: d68ecb09
+============================================================
+2025-12-05 01:38:36,882 -  * Debugger is active!
+2025-12-05 01:38:36,885 -  * Debugger PIN: 362-277-283
+2025-12-05 01:38:46,395 - 127.0.0.1 - - [05/Dec/2025 01:38:46] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 01:38:46,487 - 127.0.0.1 - - [05/Dec/2025 01:38:46] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:38:56,090 - [d68ecb09] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 01:38:58,471 - [d68ecb09] ✅ Found Price: $499.99
+2025-12-05 01:38:58,491 - 127.0.0.1 - - [05/Dec/2025 01:38:58] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 01:38:58,533 - 127.0.0.1 - - [05/Dec/2025 01:38:58] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:39:10,001 - [d68ecb09] Starting Direct Link Job...
+2025-12-05 01:39:10,015 - [d68ecb09] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 01:39:11,571 - [d68ecb09] ✅ Found Price: $499.99
+2025-12-05 01:39:13,587 - 127.0.0.1 - - [05/Dec/2025 01:39:13] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
+2025-12-05 01:39:13,621 - 127.0.0.1 - - [05/Dec/2025 01:39:13] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:39:29,062 - [d68ecb09] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 01:39:30,538 - [d68ecb09] ✅ Found Price: $499.99
+2025-12-05 01:39:30,554 - 127.0.0.1 - - [05/Dec/2025 01:39:30] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 01:39:30,582 - 127.0.0.1 - - [05/Dec/2025 01:39:30] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:40:55,106 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 01:40:55,447 -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:40:57,620 - 
+============================================================
+🚀 SERVER RESTART | Session: 5862bb3f
+============================================================
+2025-12-05 01:40:57,661 -  * Debugger is active!
+2025-12-05 01:40:57,667 -  * Debugger PIN: 362-277-283
+2025-12-05 01:41:04,256 - 
+============================================================
+🚀 SERVER RESTART | Session: cb01be1d
+============================================================
+2025-12-05 01:41:04,301 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 01:41:04,301 - [33mPress CTRL+C to quit[0m
+2025-12-05 01:41:04,317 -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:41:05,637 - 
+============================================================
+🚀 SERVER RESTART | Session: c558f74e
+============================================================
+2025-12-05 01:41:05,664 -  * Debugger is active!
+2025-12-05 01:41:05,667 -  * Debugger PIN: 362-277-283
+2025-12-05 01:41:10,952 - 127.0.0.1 - - [05/Dec/2025 01:41:10] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 01:41:11,045 - 127.0.0.1 - - [05/Dec/2025 01:41:11] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:41:16,577 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\pymysql\\cursors.py', reloading
+2025-12-05 01:41:16,801 -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:41:18,415 - 
+============================================================
+🚀 SERVER RESTART | Session: dc6497c1
+============================================================
+2025-12-05 01:41:18,444 -  * Debugger is active!
+2025-12-05 01:41:18,448 -  * Debugger PIN: 362-277-283
+2025-12-05 01:42:18,456 - 127.0.0.1 - - [05/Dec/2025 01:42:18] "[32mPOST /add_to_cart HTTP/1.1[0m" 302 -
+2025-12-05 01:42:18,515 - 127.0.0.1 - - [05/Dec/2025 01:42:18] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:42:43,154 - [dc6497c1] Requesting Clean URL: https://www.amazon.com/dp/B0DZ75FBFB
+2025-12-05 01:42:45,639 - [dc6497c1] ✅ Found Price: $696.22
+2025-12-05 01:42:45,682 - 127.0.0.1 - - [05/Dec/2025 01:42:45] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 01:42:45,722 - 127.0.0.1 - - [05/Dec/2025 01:42:45] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:43:19,623 - 127.0.0.1 - - [05/Dec/2025 01:43:19] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-12-05 01:43:19,641 - 127.0.0.1 - - [05/Dec/2025 01:43:19] "GET /login HTTP/1.1" 200 -
+2025-12-05 01:43:21,920 - 127.0.0.1 - - [05/Dec/2025 01:43:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 01:43:21,926 - 127.0.0.1 - - [05/Dec/2025 01:43:21] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-12-05 01:43:21,964 - 127.0.0.1 - - [05/Dec/2025 01:43:21] "GET /admin HTTP/1.1" 200 -
+2025-12-05 01:46:42,444 - 
+============================================================
+🚀 SERVER RESTART | Session: 413d5a26
+============================================================
+2025-12-05 01:46:42,492 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 01:46:42,492 - [33mPress CTRL+C to quit[0m
+2025-12-05 01:46:42,506 -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:46:43,817 - 
+============================================================
+🚀 SERVER RESTART | Session: 1e3200a2
+============================================================
+2025-12-05 01:46:43,840 -  * Debugger is active!
+2025-12-05 01:46:43,843 -  * Debugger PIN: 362-277-283
+2025-12-05 01:46:49,448 - 127.0.0.1 - - [05/Dec/2025 01:46:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 01:46:49,508 - 127.0.0.1 - - [05/Dec/2025 01:46:49] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:46:54,725 - [1e3200a2] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 01:46:56,946 - [1e3200a2] ✅ Found Price: $499.99
+2025-12-05 01:46:56,987 - 127.0.0.1 - - [05/Dec/2025 01:46:56] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 01:46:57,070 - 127.0.0.1 - - [05/Dec/2025 01:46:57] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:47:11,981 - [1e3200a2] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 01:47:13,518 - [1e3200a2] ✅ Found Price: $499.99
+2025-12-05 01:47:13,528 - 127.0.0.1 - - [05/Dec/2025 01:47:13] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 01:47:13,571 - 127.0.0.1 - - [05/Dec/2025 01:47:13] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:50:29,537 - 
+============================================================
+🚀 SERVER RESTART | Session: 1c559395
+============================================================
+2025-12-05 01:50:29,576 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 01:50:29,576 - [33mPress CTRL+C to quit[0m
+2025-12-05 01:50:29,590 -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:50:30,815 - 
+============================================================
+🚀 SERVER RESTART | Session: 624a79d9
+============================================================
+2025-12-05 01:50:30,838 -  * Debugger is active!
+2025-12-05 01:50:30,841 -  * Debugger PIN: 362-277-283
+2025-12-05 01:50:38,513 - 127.0.0.1 - - [05/Dec/2025 01:50:38] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 01:50:38,592 - 127.0.0.1 - - [05/Dec/2025 01:50:38] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:50:44,015 - [624a79d9] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 01:50:46,326 - [624a79d9] ✅ Found Price: $499.99
+2025-12-05 01:50:46,437 - 127.0.0.1 - - [05/Dec/2025 01:50:46] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 01:50:46,484 - 127.0.0.1 - - [05/Dec/2025 01:50:46] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:56:11,175 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\db_manager.py', reloading
+2025-12-05 01:56:11,412 -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:56:13,019 - 
+============================================================
+🚀 SERVER RESTART | Session: 32eee8e4
+============================================================
+2025-12-05 01:56:13,064 -  * Debugger is active!
+2025-12-05 01:56:13,071 -  * Debugger PIN: 362-277-283
+2025-12-05 01:56:13,904 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\db_manager.py', reloading
+2025-12-05 01:56:14,161 -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:56:15,898 - 
+============================================================
+🚀 SERVER RESTART | Session: 529845d9
+============================================================
+2025-12-05 01:56:15,930 -  * Debugger is active!
+2025-12-05 01:56:15,935 -  * Debugger PIN: 362-277-283
+2025-12-05 01:56:21,638 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 01:56:21,877 -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:56:23,775 - 
+============================================================
+🚀 SERVER RESTART | Session: 4281e4b3
+============================================================
+2025-12-05 01:56:23,812 -  * Debugger is active!
+2025-12-05 01:56:23,817 -  * Debugger PIN: 362-277-283
+2025-12-05 01:56:39,562 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\typing_extensions.py', reloading
+2025-12-05 01:56:39,789 -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:56:41,146 - 
+============================================================
+🚀 SERVER RESTART | Session: a4099558
+============================================================
+2025-12-05 01:56:41,174 -  * Debugger is active!
+2025-12-05 01:56:41,178 -  * Debugger PIN: 362-277-283
+2025-12-05 01:56:41,265 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\setup.py', reloading
+2025-12-05 01:58:01,375 - 
+============================================================
+🚀 SERVER RESTART | Session: 964f31ae
+============================================================
+2025-12-05 01:58:01,418 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 01:58:01,419 - [33mPress CTRL+C to quit[0m
+2025-12-05 01:58:01,433 -  * Restarting with watchdog (windowsapi)
+2025-12-05 01:58:02,777 - 
+============================================================
+🚀 SERVER RESTART | Session: aa668a13
+============================================================
+2025-12-05 01:58:02,806 -  * Debugger is active!
+2025-12-05 01:58:02,810 -  * Debugger PIN: 362-277-283
+2025-12-05 01:58:06,686 - 127.0.0.1 - - [05/Dec/2025 01:58:06] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 01:58:06,792 - 127.0.0.1 - - [05/Dec/2025 01:58:06] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:58:17,393 - [aa668a13] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 01:58:19,958 - [aa668a13] ✅ Found Price: $499.99
+2025-12-05 01:58:20,021 - 127.0.0.1 - - [05/Dec/2025 01:58:20] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 01:58:20,050 - 127.0.0.1 - - [05/Dec/2025 01:58:20] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:58:42,106 - 127.0.0.1 - - [05/Dec/2025 01:58:42] "[32mPOST /update_target HTTP/1.1[0m" 302 -
+2025-12-05 01:58:42,135 - 127.0.0.1 - - [05/Dec/2025 01:58:42] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:58:50,687 - 127.0.0.1 - - [05/Dec/2025 01:58:50] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-12-05 01:58:50,749 - 127.0.0.1 - - [05/Dec/2025 01:58:50] "GET /login HTTP/1.1" 200 -
+2025-12-05 01:58:53,499 - 127.0.0.1 - - [05/Dec/2025 01:58:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 01:58:53,529 - 127.0.0.1 - - [05/Dec/2025 01:58:53] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:58:57,669 - [aa668a13] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 01:58:59,233 - [aa668a13] ✅ Found Price: $499.99
+2025-12-05 01:58:59,287 - 127.0.0.1 - - [05/Dec/2025 01:58:59] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 01:58:59,358 - 127.0.0.1 - - [05/Dec/2025 01:58:59] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:59:01,234 - 127.0.0.1 - - [05/Dec/2025 01:59:01] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-12-05 01:59:01,242 - 127.0.0.1 - - [05/Dec/2025 01:59:01] "GET /login HTTP/1.1" 200 -
+2025-12-05 01:59:03,199 - 127.0.0.1 - - [05/Dec/2025 01:59:03] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 01:59:03,228 - 127.0.0.1 - - [05/Dec/2025 01:59:03] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:59:08,823 - 127.0.0.1 - - [05/Dec/2025 01:59:08] "[32mPOST /add_to_cart HTTP/1.1[0m" 302 -
+2025-12-05 01:59:08,852 - 127.0.0.1 - - [05/Dec/2025 01:59:08] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 01:59:47,487 - [aa668a13] Starting Direct Link Job...
+2025-12-05 01:59:47,501 - [aa668a13] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 01:59:49,024 - [aa668a13] ✅ Found Price: $499.99
+2025-12-05 01:59:51,032 - 127.0.0.1 - - [05/Dec/2025 01:59:51] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
+2025-12-05 01:59:51,079 - 127.0.0.1 - - [05/Dec/2025 01:59:51] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:07:14,716 - 
+============================================================
+🚀 SERVER RESTART | Session: 94cb5d88
+============================================================
+2025-12-05 02:07:14,759 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 02:07:14,759 - [33mPress CTRL+C to quit[0m
+2025-12-05 02:07:14,774 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:07:16,123 - 
+============================================================
+🚀 SERVER RESTART | Session: 5881108b
+============================================================
+2025-12-05 02:07:16,151 -  * Debugger is active!
+2025-12-05 02:07:16,155 -  * Debugger PIN: 362-277-283
+2025-12-05 02:07:18,022 - 127.0.0.1 - - [05/Dec/2025 02:07:18] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 02:07:18,098 - 127.0.0.1 - - [05/Dec/2025 02:07:18] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:07:28,615 - [5881108b] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 02:07:30,836 - [5881108b] ✅ Found Price: $499.99
+2025-12-05 02:07:30,966 - 127.0.0.1 - - [05/Dec/2025 02:07:30] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 02:07:31,011 - 127.0.0.1 - - [05/Dec/2025 02:07:31] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:07:33,492 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 02:07:33,716 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:07:35,604 - 
+============================================================
+🚀 SERVER RESTART | Session: 0fa38e8b
+============================================================
+2025-12-05 02:07:35,635 -  * Debugger is active!
+2025-12-05 02:07:35,643 -  * Debugger PIN: 362-277-283
+2025-12-05 02:08:35,433 - [0fa38e8b] Requesting Clean URL: https://www.amazon.com/dp/B0FWD1K669
+2025-12-05 02:08:37,954 - [0fa38e8b] ✅ Found Price: $949.0
+2025-12-05 02:08:38,023 - 127.0.0.1 - - [05/Dec/2025 02:08:38] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 02:08:38,093 - 127.0.0.1 - - [05/Dec/2025 02:08:38] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:09:04,011 - [0fa38e8b] Starting Direct Link Job...
+2025-12-05 02:09:04,026 - [0fa38e8b] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 02:09:05,613 - [0fa38e8b] ✅ Found Price: $499.99
+2025-12-05 02:09:07,634 - [0fa38e8b] Requesting Clean URL: https://www.amazon.com/dp/B0FWD1K669
+2025-12-05 02:09:09,114 - [0fa38e8b] ✅ Found Price: $949.0
+2025-12-05 02:09:11,145 - 127.0.0.1 - - [05/Dec/2025 02:09:11] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
+2025-12-05 02:09:11,165 - 127.0.0.1 - - [05/Dec/2025 02:09:11] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:09:35,393 - 127.0.0.1 - - [05/Dec/2025 02:09:35] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-12-05 02:09:35,412 - 127.0.0.1 - - [05/Dec/2025 02:09:35] "GET /login HTTP/1.1" 200 -
+2025-12-05 02:09:36,688 - 127.0.0.1 - - [05/Dec/2025 02:09:36] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 02:09:36,709 - 127.0.0.1 - - [05/Dec/2025 02:09:36] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:13:59,042 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 02:13:59,282 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:14:00,826 - 
+============================================================
+🚀 SERVER RESTART | Session: 21383958
+============================================================
+2025-12-05 02:14:00,855 -  * Debugger is active!
+2025-12-05 02:14:00,860 -  * Debugger PIN: 362-277-283
+2025-12-05 02:14:03,134 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 02:14:03,363 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:14:05,683 - 
+============================================================
+🚀 SERVER RESTART | Session: 2c5ec3d3
+============================================================
+2025-12-05 02:14:05,733 -  * Debugger is active!
+2025-12-05 02:14:05,740 -  * Debugger PIN: 362-277-283
+2025-12-05 02:14:26,409 - 
+============================================================
+🚀 SERVER RESTART | Session: 70256bab
+============================================================
+2025-12-05 02:14:26,468 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 02:14:26,469 - [33mPress CTRL+C to quit[0m
+2025-12-05 02:14:26,485 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:14:27,944 - 
+============================================================
+🚀 SERVER RESTART | Session: f4369a01
+============================================================
+2025-12-05 02:14:27,977 -  * Debugger is active!
+2025-12-05 02:14:27,982 -  * Debugger PIN: 362-277-283
+2025-12-05 02:14:29,543 - 127.0.0.1 - - [05/Dec/2025 02:14:29] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 02:14:29,852 - 127.0.0.1 - - [05/Dec/2025 02:14:29] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:14:45,716 - 127.0.0.1 - - [05/Dec/2025 02:14:45] "[32mGET /delete_cart/2 HTTP/1.1[0m" 302 -
+2025-12-05 02:14:45,757 - 127.0.0.1 - - [05/Dec/2025 02:14:45] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:14:46,865 - 127.0.0.1 - - [05/Dec/2025 02:14:46] "[32mGET /delete_cart/1 HTTP/1.1[0m" 302 -
+2025-12-05 02:14:46,906 - 127.0.0.1 - - [05/Dec/2025 02:14:46] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:14:58,955 - [f4369a01] Requesting Clean URL: https://www.amazon.com/dp/B0FWD1MS82
+2025-12-05 02:15:01,548 - [f4369a01] ✅ Found Price: $1199.0
+2025-12-05 02:15:01,608 - 127.0.0.1 - - [05/Dec/2025 02:15:01] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 02:15:01,670 - 127.0.0.1 - - [05/Dec/2025 02:15:01] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:15:10,407 - 127.0.0.1 - - [05/Dec/2025 02:15:10] "[32mPOST /update_target HTTP/1.1[0m" 302 -
+2025-12-05 02:15:10,439 - 127.0.0.1 - - [05/Dec/2025 02:15:10] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:15:22,387 - 127.0.0.1 - - [05/Dec/2025 02:15:22] "[32mPOST /update_target HTTP/1.1[0m" 302 -
+2025-12-05 02:15:22,421 - 127.0.0.1 - - [05/Dec/2025 02:15:22] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:18:22,368 - 
+============================================================
+🚀 SERVER RESTART | Session: 11b596e1
+============================================================
+2025-12-05 02:18:22,492 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 02:18:22,493 - [33mPress CTRL+C to quit[0m
+2025-12-05 02:18:22,509 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:18:23,978 - 
+============================================================
+🚀 SERVER RESTART | Session: fc77f58a
+============================================================
+2025-12-05 02:18:24,018 -  * Debugger is active!
+2025-12-05 02:18:24,023 -  * Debugger PIN: 362-277-283
+2025-12-05 02:18:24,059 - 127.0.0.1 - - [05/Dec/2025 02:18:24] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 02:18:24,275 - 127.0.0.1 - - [05/Dec/2025 02:18:24] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:20:16,027 - 
+============================================================
+🚀 SERVER RESTART | Session: c839c7fc
+============================================================
+2025-12-05 02:20:16,073 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 02:20:16,073 - [33mPress CTRL+C to quit[0m
+2025-12-05 02:20:16,085 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:20:17,355 - 
+============================================================
+🚀 SERVER RESTART | Session: bcd0dd52
+============================================================
+2025-12-05 02:20:17,392 -  * Debugger is active!
+2025-12-05 02:20:17,397 -  * Debugger PIN: 362-277-283
+2025-12-05 02:20:18,869 - 127.0.0.1 - - [05/Dec/2025 02:20:18] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 02:20:18,945 - 127.0.0.1 - - [05/Dec/2025 02:20:18] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:20:25,400 - 127.0.0.1 - - [05/Dec/2025 02:20:25] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-12-05 02:20:25,468 - 127.0.0.1 - - [05/Dec/2025 02:20:25] "GET /login HTTP/1.1" 200 -
+2025-12-05 02:20:27,685 - 127.0.0.1 - - [05/Dec/2025 02:20:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 02:20:27,714 - 127.0.0.1 - - [05/Dec/2025 02:20:27] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:20:51,195 - 127.0.0.1 - - [05/Dec/2025 02:20:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 02:20:51,218 - 127.0.0.1 - - [05/Dec/2025 02:20:51] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:20:58,492 - 127.0.0.1 - - [05/Dec/2025 02:20:58] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-12-05 02:20:58,506 - 127.0.0.1 - - [05/Dec/2025 02:20:58] "GET /login HTTP/1.1" 200 -
+2025-12-05 02:21:19,584 - 127.0.0.1 - - [05/Dec/2025 02:21:19] "POST /login HTTP/1.1" 200 -
+2025-12-05 02:21:22,205 - 127.0.0.1 - - [05/Dec/2025 02:21:22] "GET /signup HTTP/1.1" 200 -
+2025-12-05 02:21:40,685 - 127.0.0.1 - - [05/Dec/2025 02:21:40] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2025-12-05 02:21:40,697 - 127.0.0.1 - - [05/Dec/2025 02:21:40] "GET /login HTTP/1.1" 200 -
+2025-12-05 02:21:59,697 - 127.0.0.1 - - [05/Dec/2025 02:21:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 02:21:59,731 - 127.0.0.1 - - [05/Dec/2025 02:21:59] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:22:28,010 - [bcd0dd52] Requesting Clean URL: https://www.amazon.com/hz/mobile/mission/?_encoding=UTF8&p=puD6Mv97mN4Ak%2FkS2jQF%2BJlMHsehJyyKo4wVC0Iz%2FPZm2odem2d060SZuJ8W%2BFUtKDOJyNa4LRnjoxqsC8hXsSyOOqxmf5obgMQzdG6qihl5WgefGQNvCls7W45Kdt6Y2%2F%2FiWYy2CTSj4smrlXJrLylYZCLW5tYIH0B70iy1FgF4m0OiEd%2BORF93ZJ%2FL55dj2NqaFQvf3UZ1UNB%2FpjxZHgfuA68OC6DBpqGjyLBcDYPKbZB1dB6fVt0ljEAyxq6AuSnwZTYklzl%2F06WLq1sn5teYN6GtN1dbyhWk2Z0LlwOfUjXlcz1XtHJNnKsstL%2BUkRoFbs3NL8QYHI2vIP6oqyQvH81S%2FrlWKhPjfYY%2BvhOaNd%2F8Msl8es15fqbA%2BAe5r4JcBwK5G7NIwblbZE0%2BjQ%3D%3D&ref_=ci_mcx_mi
+2025-12-05 02:22:29,950 - [bcd0dd52] ✅ Found Price: $52.3
+2025-12-05 02:22:30,036 - 127.0.0.1 - - [05/Dec/2025 02:22:30] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 02:22:30,060 - 127.0.0.1 - - [05/Dec/2025 02:22:30] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:26:15,082 - 
+============================================================
+🚀 SERVER RESTART | Session: d73eb66f
+============================================================
+2025-12-05 02:26:15,131 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 02:26:15,132 - [33mPress CTRL+C to quit[0m
+2025-12-05 02:26:15,146 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:26:16,544 - 
+============================================================
+🚀 SERVER RESTART | Session: 46f37007
+============================================================
+2025-12-05 02:26:16,574 -  * Debugger is active!
+2025-12-05 02:26:16,578 -  * Debugger PIN: 362-277-283
+2025-12-05 02:26:19,475 - 127.0.0.1 - - [05/Dec/2025 02:26:19] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 02:26:19,591 - 127.0.0.1 - - [05/Dec/2025 02:26:19] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:26:52,103 - [46f37007] Requesting Clean URL: https://www.amazon.com/dp/B01MQWFGKG
+2025-12-05 02:26:55,183 - [46f37007] ✅ Found Price: $75.98
+2025-12-05 02:26:55,264 - 127.0.0.1 - - [05/Dec/2025 02:26:55] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 02:26:55,306 - 127.0.0.1 - - [05/Dec/2025 02:26:55] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:27:14,514 - 127.0.0.1 - - [05/Dec/2025 02:27:14] "[32mPOST /update_target HTTP/1.1[0m" 302 -
+2025-12-05 02:27:14,540 - 127.0.0.1 - - [05/Dec/2025 02:27:14] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:27:31,615 - 127.0.0.1 - - [05/Dec/2025 02:27:31] "[32mGET /delete_cart/4 HTTP/1.1[0m" 302 -
+2025-12-05 02:27:31,646 - 127.0.0.1 - - [05/Dec/2025 02:27:31] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:27:38,916 - 127.0.0.1 - - [05/Dec/2025 02:27:38] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:27:50,630 - [46f37007] Starting Direct Link Job...
+2025-12-05 02:27:50,651 - [46f37007] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 02:27:52,293 - [46f37007] ✅ Found Price: $499.99
+2025-12-05 02:27:54,302 - [46f37007] Requesting Clean URL: https://www.amazon.com/dp/B0FWD1K669
+2025-12-05 02:27:55,925 - [46f37007] ✅ Found Price: $949.0
+2025-12-05 02:27:57,943 - [46f37007] Requesting Clean URL: https://www.amazon.com/dp/B0FWD1MS82
+2025-12-05 02:27:59,635 - [46f37007] ✅ Found Price: $1199.0
+2025-12-05 02:28:01,642 - [46f37007] Requesting Clean URL: https://www.amazon.com/hz/mobile/mission/?_encoding=UTF8&p=puD6Mv97mN4Ak%2FkS2jQF%2BJlMHsehJyyKo4wVC0Iz%2FPZm2odem2d060SZuJ8W%2BFUtKDOJyNa4LRnjoxqsC8hXsSyOOqxmf5obgMQzdG6qihl5WgefGQNvCls7W45Kdt6Y2%2F%2FiWYy2CTSj4smrlXJrLylYZCLW5tYIH0B70iy1FgF4m0OiEd%2BORF93ZJ%2FL55dj2NqaFQvf3UZ1UNB%2FpjxZHgfuA68OC6DBpqGjyLBcDYPKbZB1dB6fVt0ljEAyxq6AuSnwZTYklzl%2F06WLq1sn5teYN6GtN1dbyhWk2Z0LlwOfUjXlcz1XtHJNnKsstL%2BUkRoFbs3NL8QYHI2vIP6oqyQvH81S%2FrlWKhPjfYY%2BvhOaNd%2F8Msl8es15fqbA%2BAe5r4JcBwK5G7NIwblbZE0%2BjQ%3D%3D&ref_=ci_mcx_mi
+2025-12-05 02:28:02,925 - [46f37007] ✅ Found Price: $52.3
+2025-12-05 02:28:04,930 - [46f37007] Requesting Clean URL: https://www.amazon.com/dp/B01MQWFGKG
+2025-12-05 02:28:06,842 - [46f37007] ✅ Found Price: $75.98
+2025-12-05 02:28:08,852 - 127.0.0.1 - - [05/Dec/2025 02:28:08] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
+2025-12-05 02:28:08,885 - 127.0.0.1 - - [05/Dec/2025 02:28:08] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:28:45,446 - 127.0.0.1 - - [05/Dec/2025 02:28:45] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:28:54,095 - 127.0.0.1 - - [05/Dec/2025 02:28:54] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:28:57,645 - [46f37007] Starting Direct Link Job...
+2025-12-05 02:28:57,671 - [46f37007] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 02:28:59,255 - [46f37007] ✅ Found Price: $499.99
+2025-12-05 02:29:01,265 - [46f37007] Requesting Clean URL: https://www.amazon.com/dp/B0FWD1K669
+2025-12-05 02:29:02,893 - [46f37007] ✅ Found Price: $949.0
+2025-12-05 02:29:04,899 - [46f37007] Requesting Clean URL: https://www.amazon.com/dp/B0FWD1MS82
+2025-12-05 02:29:06,410 - [46f37007] ✅ Found Price: $1199.0
+2025-12-05 02:29:08,419 - [46f37007] Requesting Clean URL: https://www.amazon.com/hz/mobile/mission/?_encoding=UTF8&p=puD6Mv97mN4Ak%2FkS2jQF%2BJlMHsehJyyKo4wVC0Iz%2FPZm2odem2d060SZuJ8W%2BFUtKDOJyNa4LRnjoxqsC8hXsSyOOqxmf5obgMQzdG6qihl5WgefGQNvCls7W45Kdt6Y2%2F%2FiWYy2CTSj4smrlXJrLylYZCLW5tYIH0B70iy1FgF4m0OiEd%2BORF93ZJ%2FL55dj2NqaFQvf3UZ1UNB%2FpjxZHgfuA68OC6DBpqGjyLBcDYPKbZB1dB6fVt0ljEAyxq6AuSnwZTYklzl%2F06WLq1sn5teYN6GtN1dbyhWk2Z0LlwOfUjXlcz1XtHJNnKsstL%2BUkRoFbs3NL8QYHI2vIP6oqyQvH81S%2FrlWKhPjfYY%2BvhOaNd%2F8Msl8es15fqbA%2BAe5r4JcBwK5G7NIwblbZE0%2BjQ%3D%3D&ref_=ci_mcx_mi
+2025-12-05 02:29:09,409 - [46f37007] ✅ Found Price: $52.3
+2025-12-05 02:29:11,431 - [46f37007] Requesting Clean URL: https://www.amazon.com/dp/B01MQWFGKG
+2025-12-05 02:29:13,321 - [46f37007] ✅ Found Price: $75.98
+2025-12-05 02:29:15,329 - 127.0.0.1 - - [05/Dec/2025 02:29:15] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
+2025-12-05 02:29:15,386 - 127.0.0.1 - - [05/Dec/2025 02:29:15] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:33:55,271 - 
+============================================================
+🚀 SERVER RESTART | Session: 841d4f8f
+============================================================
+2025-12-05 02:33:55,315 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 02:33:55,316 - [33mPress CTRL+C to quit[0m
+2025-12-05 02:33:55,329 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:33:56,742 - 
+============================================================
+🚀 SERVER RESTART | Session: bb4d147d
+============================================================
+2025-12-05 02:33:56,780 -  * Debugger is active!
+2025-12-05 02:33:56,785 -  * Debugger PIN: 362-277-283
+2025-12-05 02:33:58,233 - 127.0.0.1 - - [05/Dec/2025 02:33:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 02:33:58,258 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\db_manager.py', reloading
+2025-12-05 02:33:58,452 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:33:59,842 - 
+============================================================
+🚀 SERVER RESTART | Session: 82f51cdd
+============================================================
+2025-12-05 02:33:59,871 -  * Debugger is active!
+2025-12-05 02:33:59,875 -  * Debugger PIN: 362-277-283
+2025-12-05 02:34:00,004 - 127.0.0.1 - - [05/Dec/2025 02:34:00] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:34:30,881 - [82f51cdd] Requesting Clean URL: https://www.amazon.com/dp/B0B8YKH8PZ
+2025-12-05 02:34:33,814 - [82f51cdd] ✅ Found Price: $22.99
+2025-12-05 02:34:33,875 - 127.0.0.1 - - [05/Dec/2025 02:34:33] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 02:34:33,900 - 127.0.0.1 - - [05/Dec/2025 02:34:33] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:34:46,352 - 127.0.0.1 - - [05/Dec/2025 02:34:46] "[32mPOST /update_target HTTP/1.1[0m" 302 -
+2025-12-05 02:34:46,377 - 127.0.0.1 - - [05/Dec/2025 02:34:46] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:36:44,574 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\setup.py', reloading
+2025-12-05 02:36:45,110 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:36:47,142 - 
+============================================================
+🚀 SERVER RESTART | Session: a0e6341b
+============================================================
+2025-12-05 02:36:47,183 -  * Debugger is active!
+2025-12-05 02:36:47,188 -  * Debugger PIN: 362-277-283
+2025-12-05 02:36:58,453 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 02:36:58,699 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:37:00,449 - 
+============================================================
+🚀 SERVER RESTART | Session: 3575a26a
+============================================================
+2025-12-05 02:37:00,485 -  * Debugger is active!
+2025-12-05 02:37:00,491 -  * Debugger PIN: 362-277-283
+2025-12-05 02:37:10,891 - 
+============================================================
+🚀 SERVER RESTART | Session: a634ae49
+============================================================
+2025-12-05 02:37:10,941 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 02:37:10,941 - [33mPress CTRL+C to quit[0m
+2025-12-05 02:37:10,958 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:37:12,380 - 
+============================================================
+🚀 SERVER RESTART | Session: f537a96a
+============================================================
+2025-12-05 02:37:12,408 -  * Debugger is active!
+2025-12-05 02:37:12,412 -  * Debugger PIN: 362-277-283
+2025-12-05 02:37:14,156 - 127.0.0.1 - - [05/Dec/2025 02:37:14] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 02:37:14,234 - 127.0.0.1 - - [05/Dec/2025 02:37:14] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:37:23,561 - [f537a96a] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 02:37:25,772 - [f537a96a] ✅ Found Price: $499.99
+2025-12-05 02:37:25,964 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\flask\\app.py', reloading
+2025-12-05 02:37:26,342 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:37:27,889 - 
+============================================================
+🚀 SERVER RESTART | Session: ef54a909
+============================================================
+2025-12-05 02:37:27,921 -  * Debugger is active!
+2025-12-05 02:37:27,924 -  * Debugger PIN: 362-277-283
+2025-12-05 02:37:30,523 - [ef54a909] Requesting Clean URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 02:37:32,804 - [ef54a909] ✅ Found Price: $499.99
+2025-12-05 02:37:32,925 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\pymysql\\connections.py', reloading
+2025-12-05 02:37:33,247 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:37:34,826 - 
+============================================================
+🚀 SERVER RESTART | Session: 37a24f77
+============================================================
+2025-12-05 02:37:34,852 -  * Debugger is active!
+2025-12-05 02:37:34,857 -  * Debugger PIN: 362-277-283
+2025-12-05 02:38:06,257 - 127.0.0.1 - - [05/Dec/2025 02:38:06] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:38:23,035 - [37a24f77] Requesting Clean URL: https://www.amazon.com/dp/B0B8YKH8PZ
+2025-12-05 02:38:25,927 - [37a24f77] ✅ Found Price: $22.99
+2025-12-05 02:38:26,051 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\pymysql\\protocol.py', reloading
+2025-12-05 02:38:26,477 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:38:27,968 - 
+============================================================
+🚀 SERVER RESTART | Session: 3d7965e9
+============================================================
+2025-12-05 02:38:27,992 -  * Debugger is active!
+2025-12-05 02:38:27,997 -  * Debugger PIN: 362-277-283
+2025-12-05 02:40:33,448 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\utils.py', reloading
+2025-12-05 02:40:33,858 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:40:35,996 - 
+============================================================
+🚀 SERVER RESTART | Session: 422902ad
+============================================================
+2025-12-05 02:40:36,031 -  * Debugger is active!
+2025-12-05 02:40:36,040 -  * Debugger PIN: 362-277-283
+2025-12-05 02:40:36,605 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\utils.py', reloading
+2025-12-05 02:40:36,778 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:40:38,372 - 
+============================================================
+🚀 SERVER RESTART | Session: 158f08d2
+============================================================
+2025-12-05 02:40:38,416 -  * Debugger is active!
+2025-12-05 02:40:38,422 -  * Debugger PIN: 362-277-283
+2025-12-05 02:40:45,044 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 02:40:45,310 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:40:47,277 - 
+============================================================
+SERVER RESTART | Session: c7f134e9
+============================================================
+2025-12-05 02:40:59,629 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:41:01,598 - 
+============================================================
+SERVER RESTART | Session: 866557bc
+============================================================
+2025-12-05 02:41:10,768 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:41:12,482 - 
+============================================================
+SERVER RESTART | Session: d6dbe52f
+============================================================
+2025-12-05 02:41:20,414 - 
+============================================================
+SERVER RESTART | Session: 4607ced4
+============================================================
+2025-12-05 02:41:21,846 - 
+============================================================
+SERVER RESTART | Session: 0b36789f
+============================================================
+2025-12-05 02:41:39,017 - [0b36789f] User adding link...
+2025-12-05 02:41:43,964 - 
+============================================================
+SERVER RESTART | Session: 8d3e676a
+============================================================
+2025-12-05 02:43:41,746 - 
+============================================================
+SERVER RESTART | Session: 35b48e6c
+============================================================
+2025-12-05 02:44:33,651 - 
+SERVER RESTART | Session: 62a318e7
+
+2025-12-05 02:44:33,711 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 02:44:33,711 - [33mPress CTRL+C to quit[0m
+2025-12-05 02:44:33,728 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:44:35,353 - 
+SERVER RESTART | Session: f7dd89b4
+
+2025-12-05 02:44:35,381 -  * Debugger is active!
+2025-12-05 02:44:35,387 -  * Debugger PIN: 362-277-283
+2025-12-05 02:44:35,450 - 127.0.0.1 - - [05/Dec/2025 02:44:35] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 02:44:35,540 - 127.0.0.1 - - [05/Dec/2025 02:44:35] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:44:38,645 - [f7dd89b4] User adding link...
+2025-12-05 02:44:38,646 - [f7dd89b4] Requesting URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 02:44:41,243 - [f7dd89b4] Found Price: $499.99
+2025-12-05 02:44:41,408 - 127.0.0.1 - - [05/Dec/2025 02:44:41] "[35m[1mPOST /user/create_product HTTP/1.1[0m" 500 -
+2025-12-05 02:44:41,551 - 127.0.0.1 - - [05/Dec/2025 02:44:41] "[36mGET /user/create_product?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-05 02:44:41,573 - 127.0.0.1 - - [05/Dec/2025 02:44:41] "[36mGET /user/create_product?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-05 02:44:41,625 - 127.0.0.1 - - [05/Dec/2025 02:44:41] "GET /user/create_product?__debugger__=yes&cmd=resource&f=console.png&s=kGRn6tm5bnNN7RPiLa9l HTTP/1.1" 200 -
+2025-12-05 02:44:41,646 - 127.0.0.1 - - [05/Dec/2025 02:44:41] "[36mGET /user/create_product?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-12-05 02:48:24,969 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 02:48:25,329 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:48:27,293 - 
+SERVER RESTART | Session: fa15362a
+
+2025-12-05 02:48:27,322 -  * Debugger is active!
+2025-12-05 02:48:27,325 -  * Debugger PIN: 362-277-283
+2025-12-05 02:48:34,661 - 
+SERVER RESTART | Session: 7ed608c5
+
+2025-12-05 02:48:34,706 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 02:48:34,707 - [33mPress CTRL+C to quit[0m
+2025-12-05 02:48:34,723 -  * Restarting with watchdog (windowsapi)
+2025-12-05 02:48:36,161 - 
+SERVER RESTART | Session: 6483c08c
+
+2025-12-05 02:48:36,192 -  * Debugger is active!
+2025-12-05 02:48:36,196 -  * Debugger PIN: 362-277-283
+2025-12-05 02:48:38,110 - 127.0.0.1 - - [05/Dec/2025 02:48:38] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 02:48:38,189 - 127.0.0.1 - - [05/Dec/2025 02:48:38] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:48:44,541 - [6483c08c] User adding link...
+2025-12-05 02:48:44,542 - [6483c08c] Requesting URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 02:48:46,978 - [6483c08c] Found Price: $499.99
+2025-12-05 02:48:47,103 - 127.0.0.1 - - [05/Dec/2025 02:48:47] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 02:48:47,141 - 127.0.0.1 - - [05/Dec/2025 02:48:47] "GET /login HTTP/1.1" 200 -
+2025-12-05 02:48:53,970 - 127.0.0.1 - - [05/Dec/2025 02:48:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 02:48:54,009 - 127.0.0.1 - - [05/Dec/2025 02:48:54] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:48:56,512 - [6483c08c] User adding link...
+2025-12-05 02:48:56,512 - [6483c08c] Requesting URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 02:48:58,164 - [6483c08c] Found Price: $499.99
+2025-12-05 02:48:58,287 - 127.0.0.1 - - [05/Dec/2025 02:48:58] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 02:48:58,357 - 127.0.0.1 - - [05/Dec/2025 02:48:58] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 02:49:04,838 - 127.0.0.1 - - [05/Dec/2025 02:49:04] "[32mPOST /update_target HTTP/1.1[0m" 302 -
+2025-12-05 02:49:04,879 - 127.0.0.1 - - [05/Dec/2025 02:49:04] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 12:43:02,575 - 
+SERVER RESTART | Session: 00621d65
+
+2025-12-05 12:43:02,718 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 12:43:02,719 - [33mPress CTRL+C to quit[0m
+2025-12-05 12:43:02,744 -  * Restarting with watchdog (windowsapi)
+2025-12-05 12:43:04,223 - 
+SERVER RESTART | Session: 2f5df6ce
+
+2025-12-05 12:43:04,250 -  * Debugger is active!
+2025-12-05 12:43:04,268 -  * Debugger PIN: 362-277-283
+2025-12-05 12:43:05,704 - 127.0.0.1 - - [05/Dec/2025 12:43:05] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 12:43:06,114 - 127.0.0.1 - - [05/Dec/2025 12:43:06] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 12:43:45,362 - [2f5df6ce] User adding link...
+2025-12-05 12:43:45,363 - [2f5df6ce] Requesting URL: https://www.amazon.com/dp/B0F7Z4QZTT
+2025-12-05 12:43:47,994 - [2f5df6ce] Found Price: $29.99
+2025-12-05 12:43:48,111 - 127.0.0.1 - - [05/Dec/2025 12:43:48] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 12:43:48,160 - 127.0.0.1 - - [05/Dec/2025 12:43:48] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 12:44:05,463 - [2f5df6ce] User adding link...
+2025-12-05 12:44:05,464 - [2f5df6ce] Requesting URL: https://www.amazon.com/dp/B09B8V1LZ3
+2025-12-05 12:44:07,501 - [2f5df6ce] Found Price: $31.99
+2025-12-05 12:44:07,639 - 127.0.0.1 - - [05/Dec/2025 12:44:07] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 12:44:07,678 - 127.0.0.1 - - [05/Dec/2025 12:44:07] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 12:44:42,715 - [2f5df6ce] Starting Direct Link Job...
+2025-12-05 12:44:42,733 - [2f5df6ce] Requesting URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 12:44:44,474 - [2f5df6ce] Found Price: $499.99
+2025-12-05 12:44:46,488 - [2f5df6ce] Requesting URL: https://www.amazon.com/dp/B0F7Z4QZTT
+2025-12-05 12:44:48,076 - [2f5df6ce] Found Price: $29.99
+2025-12-05 12:44:50,116 - [2f5df6ce] Requesting URL: https://www.amazon.com/dp/B09B8V1LZ3
+2025-12-05 12:44:51,823 - [2f5df6ce] Found Price: $31.99
+2025-12-05 12:44:53,853 - 127.0.0.1 - - [05/Dec/2025 12:44:53] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
+2025-12-05 12:44:53,907 - 127.0.0.1 - - [05/Dec/2025 12:44:53] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 13:04:28,140 - 127.0.0.1 - - [05/Dec/2025 13:04:28] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-12-05 13:04:28,245 - 127.0.0.1 - - [05/Dec/2025 13:04:28] "GET /login HTTP/1.1" 200 -
+2025-12-05 13:04:32,088 - 127.0.0.1 - - [05/Dec/2025 13:04:32] "GET /signup HTTP/1.1" 200 -
+2025-12-05 13:04:33,852 - 127.0.0.1 - - [05/Dec/2025 13:04:33] "GET /login HTTP/1.1" 200 -
+2025-12-05 13:04:35,952 - 127.0.0.1 - - [05/Dec/2025 13:04:35] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 13:04:35,984 - 127.0.0.1 - - [05/Dec/2025 13:04:35] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 13:04:58,256 - [2f5df6ce] User adding link...
+2025-12-05 13:04:58,257 - [2f5df6ce] Requesting URL: https://www.amazon.com/dp/B09FPXGLGF
+2025-12-05 13:05:01,018 - [2f5df6ce] Found Price: $10.99
+2025-12-05 13:05:01,117 - 127.0.0.1 - - [05/Dec/2025 13:05:01] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 13:05:01,167 - 127.0.0.1 - - [05/Dec/2025 13:05:01] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 13:05:15,107 - 127.0.0.1 - - [05/Dec/2025 13:05:15] "[32mPOST /update_target HTTP/1.1[0m" 302 -
+2025-12-05 13:05:15,160 - 127.0.0.1 - - [05/Dec/2025 13:05:15] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 13:05:42,575 - [2f5df6ce] Starting Direct Link Job...
+2025-12-05 13:05:42,594 - [2f5df6ce] Requesting URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 13:05:44,268 - [2f5df6ce] Title found but NO price.
+2025-12-05 13:05:46,270 - [2f5df6ce] Requesting URL: https://www.amazon.com/dp/B0F7Z4QZTT
+2025-12-05 13:05:48,241 - [2f5df6ce] Found Price: $29.99
+2025-12-05 13:05:50,291 - [2f5df6ce] Requesting URL: https://www.amazon.com/dp/B09B8V1LZ3
+2025-12-05 13:05:52,071 - [2f5df6ce] Found Price: $31.99
+2025-12-05 13:05:54,115 - [2f5df6ce] Requesting URL: https://www.amazon.com/dp/B09FPXGLGF
+2025-12-05 13:05:55,930 - [2f5df6ce] Found Price: $10.99
+2025-12-05 13:05:57,975 - 127.0.0.1 - - [05/Dec/2025 13:05:57] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
+2025-12-05 13:05:58,043 - 127.0.0.1 - - [05/Dec/2025 13:05:58] "GET /dashboard HTTP/1.1" 200 -

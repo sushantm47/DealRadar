@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center align-items-center" style="min-height: 70vh;">
+    <div class="col-md-5 col-lg-4">
+        <div class="text-center mb-4">
+            <i class="fas fa-radar fa-3x text-primary mb-2"></i>
+            <h2 class="fw-bold">DealRadar</h2>
+            <p class="text-muted">Intelligent Price Monitoring</p>
+        </div>
+
+        <div class="card shadow-lg border-0">
+            <div class="card-body p-4">
+                <div class="mb-4 p-3 bg-light rounded border">
+                    <label class="form-label small fw-bold text-uppercase text-muted">Quick Login</label>
+                    <select id="userType" class="form-select border-0 bg-white shadow-sm" onchange="togglePassword()">
+                        <option value="test">👤 Test User (John)</option>
+                        <option value="admin">🛠️ Admin User</option>
+                        <option value="custom">🔓 Standard Login</option>
+                    </select>
+                </div>
+
+                <form action="/login" method="POST">
+                    <div class="form-floating mb-3">
+                        <input type="email" name="email" id="emailField" class="form-control" value="john@example.com" placeholder="name@example.com" required>
+                        <label for="emailField">Email address</label>
+                    </div>
+                    
+                    <div class="form-floating mb-4" id="passwordSection" style="display: none;">
+                        <input type="password" name="password" class="form-control" placeholder="Password">
+                        <label>Password</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 py-3 fw-bold">Sign In</button>
+                </form>
+            </div>
+            <div class="card-footer bg-light text-center py-3">
+                <small>Don't have an account? <a href="{{ url_for('signup') }}" class="fw-bold text-primary text-decoration-none">Sign Up</a></small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function togglePassword() {
+    var type = document.getElementById("userType").value;
+    var passDiv = document.getElementById("passwordSection");
+    var emailField = document.getElementById("emailField");
+
+    if (type === "test") {
+        passDiv.style.display = "none";
+        emailField.value = "john@example.com";
+        emailField.readOnly = true;
+    } else if (type === "admin") {
+        passDiv.style.display = "block";
+        emailField.value = "admin@dealradar.com";
+        emailField.readOnly = true;
+    } else {
+        passDiv.style.display = "block";
+        emailField.value = "";
+        emailField.readOnly = false;
+        emailField.focus();
+    }
+}
+togglePassword();
+</script>
+{% endblock %}
