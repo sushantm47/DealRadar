@@ -723,3 +723,624 @@ SERVER RESTART | Session: 2f5df6ce
 2025-12-05 13:05:55,930 - [2f5df6ce] Found Price: $10.99
 2025-12-05 13:05:57,975 - 127.0.0.1 - - [05/Dec/2025 13:05:57] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
 2025-12-05 13:05:58,043 - 127.0.0.1 - - [05/Dec/2025 13:05:58] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 17:55:35,005 - 
+SERVER RESTART | Session: ed44b7bf
+
+2025-12-05 17:55:35,055 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 17:55:35,055 - [33mPress CTRL+C to quit[0m
+2025-12-05 17:55:35,068 -  * Restarting with watchdog (windowsapi)
+2025-12-05 17:55:36,521 - 
+SERVER RESTART | Session: 814391bb
+
+2025-12-05 17:55:36,550 -  * Debugger is active!
+2025-12-05 17:55:36,554 -  * Debugger PIN: 362-277-283
+2025-12-05 17:55:36,586 - 127.0.0.1 - - [05/Dec/2025 17:55:36] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 17:55:36,675 - 127.0.0.1 - - [05/Dec/2025 17:55:36] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 17:55:42,645 - [814391bb] User adding link...
+2025-12-05 17:55:42,645 - [814391bb] Requesting URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 17:55:44,892 - [814391bb] Title found but NO price.
+2025-12-05 17:55:44,935 - 127.0.0.1 - - [05/Dec/2025 17:55:44] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 17:55:44,953 - 127.0.0.1 - - [05/Dec/2025 17:55:44] "GET /login HTTP/1.1" 200 -
+2025-12-05 17:55:47,792 - 127.0.0.1 - - [05/Dec/2025 17:55:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 17:55:47,815 - 127.0.0.1 - - [05/Dec/2025 17:55:47] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 17:55:50,617 - [814391bb] User adding link...
+2025-12-05 17:55:50,617 - [814391bb] Requesting URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 17:55:52,170 - [814391bb] Title found but NO price.
+2025-12-05 17:55:52,204 - 127.0.0.1 - - [05/Dec/2025 17:55:52] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 17:55:52,230 - 127.0.0.1 - - [05/Dec/2025 17:55:52] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 17:56:17,103 - 127.0.0.1 - - [05/Dec/2025 17:56:17] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-12-05 17:56:17,140 - 127.0.0.1 - - [05/Dec/2025 17:56:17] "GET /login HTTP/1.1" 200 -
+2025-12-05 17:56:19,083 - 127.0.0.1 - - [05/Dec/2025 17:56:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 17:56:19,107 - 127.0.0.1 - - [05/Dec/2025 17:56:19] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 17:56:46,265 - [814391bb] User adding link...
+2025-12-05 17:56:46,265 - [814391bb] Requesting URL: https://www.amazon.com/dp/B0C8BZ7QG7
+2025-12-05 17:56:47,938 - [814391bb] Found Price: $99.99
+2025-12-05 17:56:48,079 - 127.0.0.1 - - [05/Dec/2025 17:56:48] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 17:56:48,106 - 127.0.0.1 - - [05/Dec/2025 17:56:48] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 17:56:59,929 - 127.0.0.1 - - [05/Dec/2025 17:56:59] "[32mGET /delete_cart/2 HTTP/1.1[0m" 302 -
+2025-12-05 17:56:59,954 - 127.0.0.1 - - [05/Dec/2025 17:56:59] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 17:57:29,778 - [814391bb] User adding link...
+2025-12-05 17:57:29,779 - [814391bb] Requesting URL: https://www.amazon.com/dp/B0BL8T9XZZ
+2025-12-05 17:57:31,357 - [814391bb] Found Price: $129.99
+2025-12-05 17:57:31,401 - 127.0.0.1 - - [05/Dec/2025 17:57:31] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 17:57:31,444 - 127.0.0.1 - - [05/Dec/2025 17:57:31] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 17:57:40,510 - [814391bb] Starting Direct Link Job...
+2025-12-05 17:57:40,522 - [814391bb] Requesting URL: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 17:57:41,979 - [814391bb] Title found but NO price.
+2025-12-05 17:57:43,981 - [814391bb] Requesting URL: https://www.amazon.com/dp/B0C8BZ7QG7
+2025-12-05 17:57:45,487 - [814391bb] Found Price: $99.99
+2025-12-05 17:57:47,496 - [814391bb] Requesting URL: https://www.amazon.com/dp/B0BL8T9XZZ
+2025-12-05 17:57:48,974 - [814391bb] Found Price: $129.99
+2025-12-05 17:57:50,984 - 127.0.0.1 - - [05/Dec/2025 17:57:50] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
+2025-12-05 17:57:51,011 - 127.0.0.1 - - [05/Dec/2025 17:57:51] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 17:58:17,512 - [814391bb] User adding link...
+2025-12-05 17:58:17,512 - [814391bb] Requesting URL: https://www.amazon.com/dp/B0CJT5DJ16
+2025-12-05 17:58:19,929 - [814391bb] Found Price: $29.99
+2025-12-05 17:58:19,996 - 127.0.0.1 - - [05/Dec/2025 17:58:19] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 17:58:20,018 - 127.0.0.1 - - [05/Dec/2025 17:58:20] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 18:11:08,524 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\scraper.py', reloading
+2025-12-05 18:11:09,231 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:11:11,346 - 
+SERVER RESTART | Session: 5edb15fd
+
+2025-12-05 18:11:11,378 -  * Debugger is active!
+2025-12-05 18:11:11,385 -  * Debugger PIN: 362-277-283
+2025-12-05 18:12:39,227 - 127.0.0.1 - - [05/Dec/2025 18:12:39] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 18:12:44,465 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\cloudscraper\\__init__.py', reloading
+2025-12-05 18:12:45,162 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:12:47,202 - 
+SERVER RESTART | Session: 256599c5
+
+2025-12-05 18:12:47,230 -  * Debugger is active!
+2025-12-05 18:12:47,235 -  * Debugger PIN: 362-277-283
+2025-12-05 18:13:19,668 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\scraper.py', reloading
+2025-12-05 18:13:19,928 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:13:21,855 - 
+SERVER RESTART | Session: 3d1a2183
+
+2025-12-05 18:13:21,888 -  * Debugger is active!
+2025-12-05 18:13:21,897 -  * Debugger PIN: 362-277-283
+2025-12-05 18:13:37,332 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 18:13:37,716 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:16:40,673 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 18:16:40,675 - [33mPress CTRL+C to quit[0m
+2025-12-05 18:16:40,692 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:16:42,248 -  * Debugger is active!
+2025-12-05 18:16:42,252 -  * Debugger PIN: 362-277-283
+2025-12-05 18:16:43,878 - 127.0.0.1 - - [05/Dec/2025 18:16:43] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 18:16:43,944 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\flask\\app.py', reloading
+2025-12-05 18:16:44,363 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:16:45,896 -  * Debugger is active!
+2025-12-05 18:16:45,901 -  * Debugger PIN: 362-277-283
+2025-12-05 18:16:45,985 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\pandas\\io\\sql.py', reloading
+2025-12-05 18:16:46,173 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:16:47,657 -  * Debugger is active!
+2025-12-05 18:16:47,662 -  * Debugger PIN: 362-277-283
+2025-12-05 18:16:49,393 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\pymysql\\cursors.py', reloading
+2025-12-05 18:16:49,735 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:16:51,443 -  * Debugger is active!
+2025-12-05 18:16:51,447 -  * Debugger PIN: 362-277-283
+2025-12-05 18:16:51,536 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\pymysql\\protocol.py', reloading
+2025-12-05 18:16:51,730 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:16:53,228 -  * Debugger is active!
+2025-12-05 18:16:53,233 -  * Debugger PIN: 362-277-283
+2025-12-05 18:16:56,814 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\pymysql\\err.py', reloading
+2025-12-05 18:16:57,182 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:16:58,781 -  * Debugger is active!
+2025-12-05 18:16:58,785 -  * Debugger PIN: 362-277-283
+2025-12-05 18:16:58,817 - 127.0.0.1 - - [05/Dec/2025 18:16:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 18:16:58,878 - 127.0.0.1 - - [05/Dec/2025 18:16:58] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-12-05 18:16:59,006 - 127.0.0.1 - - [05/Dec/2025 18:16:59] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-05 18:16:59,006 - 127.0.0.1 - - [05/Dec/2025 18:16:59] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-05 18:16:59,071 - 127.0.0.1 - - [05/Dec/2025 18:16:59] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=A2nouWJAo2cF9i1RUwPZ HTTP/1.1" 200 -
+2025-12-05 18:18:11,827 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\setup.py', reloading
+2025-12-05 18:18:12,157 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:18:13,886 -  * Debugger is active!
+2025-12-05 18:18:13,890 -  * Debugger PIN: 362-277-283
+2025-12-05 18:18:14,246 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\setup.py', reloading
+2025-12-05 18:18:14,549 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:18:16,087 -  * Debugger is active!
+2025-12-05 18:18:16,092 -  * Debugger PIN: 362-277-283
+2025-12-05 18:18:24,438 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 18:18:24,439 - [33mPress CTRL+C to quit[0m
+2025-12-05 18:18:24,457 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:18:25,918 -  * Debugger is active!
+2025-12-05 18:18:25,922 -  * Debugger PIN: 362-277-283
+2025-12-05 18:18:28,542 - 127.0.0.1 - - [05/Dec/2025 18:18:28] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 18:18:28,625 - 127.0.0.1 - - [05/Dec/2025 18:18:28] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-12-05 18:18:28,759 - 127.0.0.1 - - [05/Dec/2025 18:18:28] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-05 18:18:28,761 - 127.0.0.1 - - [05/Dec/2025 18:18:28] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-05 18:18:28,841 - 127.0.0.1 - - [05/Dec/2025 18:18:28] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=IN8UZcQ1OJkvqakCuwZi HTTP/1.1" 200 -
+2025-12-05 18:18:50,117 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 18:18:50,118 - [33mPress CTRL+C to quit[0m
+2025-12-05 18:18:50,133 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:18:51,552 -  * Debugger is active!
+2025-12-05 18:18:51,556 -  * Debugger PIN: 362-277-283
+2025-12-05 18:19:19,200 - 127.0.0.1 - - [05/Dec/2025 18:19:19] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 18:19:19,271 - 127.0.0.1 - - [05/Dec/2025 18:19:19] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-12-05 18:19:19,360 - 127.0.0.1 - - [05/Dec/2025 18:19:19] "GET /login HTTP/1.1" 200 -
+2025-12-05 18:19:23,131 - 127.0.0.1 - - [05/Dec/2025 18:19:23] "POST /login HTTP/1.1" 200 -
+2025-12-05 18:19:31,892 - 127.0.0.1 - - [05/Dec/2025 18:19:31] "GET /signup HTTP/1.1" 200 -
+2025-12-05 18:19:43,840 - 127.0.0.1 - - [05/Dec/2025 18:19:43] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2025-12-05 18:19:43,850 - 127.0.0.1 - - [05/Dec/2025 18:19:43] "GET /login HTTP/1.1" 200 -
+2025-12-05 18:19:54,235 - 127.0.0.1 - - [05/Dec/2025 18:19:54] "POST /login HTTP/1.1" 200 -
+2025-12-05 18:20:10,791 - 127.0.0.1 - - [05/Dec/2025 18:20:10] "POST /login HTTP/1.1" 200 -
+2025-12-05 18:20:14,553 - 127.0.0.1 - - [05/Dec/2025 18:20:14] "GET /signup HTTP/1.1" 200 -
+2025-12-05 18:20:20,640 - 127.0.0.1 - - [05/Dec/2025 18:20:20] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-12-05 18:20:20,652 - 127.0.0.1 - - [05/Dec/2025 18:20:20] "GET /login HTTP/1.1" 200 -
+2025-12-05 18:20:29,112 - 127.0.0.1 - - [05/Dec/2025 18:20:29] "POST /login HTTP/1.1" 200 -
+2025-12-05 18:20:30,553 - 127.0.0.1 - - [05/Dec/2025 18:20:30] "GET /signup HTTP/1.1" 200 -
+2025-12-05 18:20:39,361 - 127.0.0.1 - - [05/Dec/2025 18:20:39] "POST /signup HTTP/1.1" 200 -
+2025-12-05 18:20:57,130 - 127.0.0.1 - - [05/Dec/2025 18:20:57] "[32mPOST /signup HTTP/1.1[0m" 302 -
+2025-12-05 18:20:57,141 - 127.0.0.1 - - [05/Dec/2025 18:20:57] "GET /login HTTP/1.1" 200 -
+2025-12-05 18:20:59,357 - 127.0.0.1 - - [05/Dec/2025 18:20:59] "GET /signup HTTP/1.1" 200 -
+2025-12-05 18:21:00,874 - 127.0.0.1 - - [05/Dec/2025 18:21:00] "GET /login HTTP/1.1" 200 -
+2025-12-05 18:21:13,167 - 127.0.0.1 - - [05/Dec/2025 18:21:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 18:21:13,318 - 127.0.0.1 - - [05/Dec/2025 18:21:13] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 18:21:24,963 - 127.0.0.1 - - [05/Dec/2025 18:21:24] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 18:21:44,033 - 127.0.0.1 - - [05/Dec/2025 18:21:44] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 18:21:44,076 - 127.0.0.1 - - [05/Dec/2025 18:21:44] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 18:22:27,030 - 127.0.0.1 - - [05/Dec/2025 18:22:27] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
+2025-12-05 18:22:27,081 - 127.0.0.1 - - [05/Dec/2025 18:22:27] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 18:22:37,428 - 127.0.0.1 - - [05/Dec/2025 18:22:37] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 18:22:39,227 - 127.0.0.1 - - [05/Dec/2025 18:22:39] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 18:22:55,260 - 127.0.0.1 - - [05/Dec/2025 18:22:55] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 18:22:55,352 - 127.0.0.1 - - [05/Dec/2025 18:22:55] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 18:23:29,699 - 127.0.0.1 - - [05/Dec/2025 18:23:29] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 18:23:29,787 - 127.0.0.1 - - [05/Dec/2025 18:23:29] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 18:23:33,835 - 127.0.0.1 - - [05/Dec/2025 18:23:33] "[32mGET /delete_cart/5 HTTP/1.1[0m" 302 -
+2025-12-05 18:23:33,913 - 127.0.0.1 - - [05/Dec/2025 18:23:33] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 18:27:22,599 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 18:27:23,007 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:27:25,005 -  * Debugger is active!
+2025-12-05 18:27:25,011 -  * Debugger PIN: 362-277-283
+2025-12-05 18:27:38,162 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\scraper.py', reloading
+2025-12-05 18:27:38,347 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:27:39,934 -  * Debugger is active!
+2025-12-05 18:27:39,938 -  * Debugger PIN: 362-277-283
+2025-12-05 18:27:40,309 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\scraper.py', reloading
+2025-12-05 18:27:40,635 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:27:42,622 -  * Debugger is active!
+2025-12-05 18:27:42,626 -  * Debugger PIN: 362-277-283
+2025-12-05 18:28:26,239 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\scraper.py', reloading
+2025-12-05 18:28:26,422 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:28:28,069 -  * Debugger is active!
+2025-12-05 18:28:28,073 -  * Debugger PIN: 362-277-283
+2025-12-05 18:28:34,153 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 18:28:34,154 - [33mPress CTRL+C to quit[0m
+2025-12-05 18:28:34,170 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:28:35,779 -  * Debugger is active!
+2025-12-05 18:28:35,783 -  * Debugger PIN: 362-277-283
+2025-12-05 18:28:35,814 - 127.0.0.1 - - [05/Dec/2025 18:28:35] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 18:28:35,985 - 127.0.0.1 - - [05/Dec/2025 18:28:35] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 18:28:42,297 - 127.0.0.1 - - [05/Dec/2025 18:28:42] "GET /api/history/4 HTTP/1.1" 200 -
+2025-12-05 18:29:16,538 - 127.0.0.1 - - [05/Dec/2025 18:29:16] "[32mGET /trigger_news HTTP/1.1[0m" 302 -
+2025-12-05 18:29:16,633 - 127.0.0.1 - - [05/Dec/2025 18:29:16] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 18:30:00,132 - 127.0.0.1 - - [05/Dec/2025 18:30:00] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 18:30:00,234 - 127.0.0.1 - - [05/Dec/2025 18:30:00] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 18:30:12,855 - 127.0.0.1 - - [05/Dec/2025 18:30:12] "[32mPOST /update_target HTTP/1.1[0m" 302 -
+2025-12-05 18:30:12,951 - 127.0.0.1 - - [05/Dec/2025 18:30:12] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 18:30:36,352 - 127.0.0.1 - - [05/Dec/2025 18:30:36] "[32mGET /trigger_news HTTP/1.1[0m" 302 -
+2025-12-05 18:30:36,432 - 127.0.0.1 - - [05/Dec/2025 18:30:36] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 18:31:03,445 - 127.0.0.1 - - [05/Dec/2025 18:31:03] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 18:31:03,519 - 127.0.0.1 - - [05/Dec/2025 18:31:03] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 18:31:38,287 - 127.0.0.1 - - [05/Dec/2025 18:31:38] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
+2025-12-05 18:31:38,385 - 127.0.0.1 - - [05/Dec/2025 18:31:38] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 18:31:48,666 - 127.0.0.1 - - [05/Dec/2025 18:31:48] "GET /api/history/4 HTTP/1.1" 200 -
+2025-12-05 18:32:56,448 - 127.0.0.1 - - [05/Dec/2025 18:32:56] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-12-05 18:32:56,467 - 127.0.0.1 - - [05/Dec/2025 18:32:56] "GET /login HTTP/1.1" 200 -
+2025-12-05 18:32:58,822 - 127.0.0.1 - - [05/Dec/2025 18:32:58] "POST /login HTTP/1.1" 200 -
+2025-12-05 18:34:18,224 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 18:34:18,225 - [33mPress CTRL+C to quit[0m
+2025-12-05 18:34:18,243 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:34:19,702 -  * Debugger is active!
+2025-12-05 18:34:19,706 -  * Debugger PIN: 362-277-283
+2025-12-05 18:34:20,969 - 127.0.0.1 - - [05/Dec/2025 18:34:20] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 18:34:20,992 - 127.0.0.1 - - [05/Dec/2025 18:34:20] "GET /login HTTP/1.1" 200 -
+2025-12-05 18:34:33,574 - 127.0.0.1 - - [05/Dec/2025 18:34:33] "POST /login HTTP/1.1" 200 -
+2025-12-05 18:37:45,929 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 18:37:45,929 - [33mPress CTRL+C to quit[0m
+2025-12-05 18:37:45,949 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:37:47,525 -  * Debugger is active!
+2025-12-05 18:37:47,530 -  * Debugger PIN: 362-277-283
+2025-12-05 18:37:49,353 - 127.0.0.1 - - [05/Dec/2025 18:37:49] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 18:37:49,423 - 127.0.0.1 - - [05/Dec/2025 18:37:49] "GET /login HTTP/1.1" 200 -
+2025-12-05 18:37:57,341 - 127.0.0.1 - - [05/Dec/2025 18:37:57] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 18:37:57,543 - 127.0.0.1 - - [05/Dec/2025 18:37:57] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 18:38:34,907 - 127.0.0.1 - - [05/Dec/2025 18:38:34] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 18:38:34,954 - 127.0.0.1 - - [05/Dec/2025 18:38:34] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 18:38:39,898 - 127.0.0.1 - - [05/Dec/2025 18:38:39] "GET /api/history/4 HTTP/1.1" 200 -
+2025-12-05 18:42:07,161 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 18:42:07,162 - [33mPress CTRL+C to quit[0m
+2025-12-05 18:42:07,177 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:42:08,712 -  * Debugger is active!
+2025-12-05 18:42:08,716 -  * Debugger PIN: 362-277-283
+2025-12-05 18:42:10,760 - 127.0.0.1 - - [05/Dec/2025 18:42:10] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 18:42:10,988 - 127.0.0.1 - - [05/Dec/2025 18:42:10] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 18:42:24,030 - 127.0.0.1 - - [05/Dec/2025 18:42:24] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 18:42:25,327 - 127.0.0.1 - - [05/Dec/2025 18:42:25] "GET /dashboard?active_tab=account HTTP/1.1" 200 -
+2025-12-05 18:42:27,045 - 127.0.0.1 - - [05/Dec/2025 18:42:27] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 18:42:43,232 - 127.0.0.1 - - [05/Dec/2025 18:42:43] "[32mGET /trigger_news HTTP/1.1[0m" 302 -
+2025-12-05 18:42:43,335 - 127.0.0.1 - - [05/Dec/2025 18:42:43] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 18:43:45,285 - 127.0.0.1 - - [05/Dec/2025 18:43:45] "[32mGET /trigger_news HTTP/1.1[0m" 302 -
+2025-12-05 18:43:45,349 - 127.0.0.1 - - [05/Dec/2025 18:43:45] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 18:44:03,762 - 127.0.0.1 - - [05/Dec/2025 18:44:03] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 18:45:22,272 - 127.0.0.1 - - [05/Dec/2025 18:45:22] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 18:45:22,315 - 127.0.0.1 - - [05/Dec/2025 18:45:22] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 18:45:35,250 - 127.0.0.1 - - [05/Dec/2025 18:45:35] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 18:45:48,701 - 127.0.0.1 - - [05/Dec/2025 18:45:48] "[32mGET /trigger_news HTTP/1.1[0m" 302 -
+2025-12-05 18:45:48,779 - 127.0.0.1 - - [05/Dec/2025 18:45:48] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 18:46:36,931 - 127.0.0.1 - - [05/Dec/2025 18:46:36] "[32mGET /trigger_news HTTP/1.1[0m" 302 -
+2025-12-05 18:46:37,010 - 127.0.0.1 - - [05/Dec/2025 18:46:37] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 18:48:39,178 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 18:48:39,523 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:48:41,425 -  * Debugger is active!
+2025-12-05 18:48:41,429 -  * Debugger PIN: 362-277-283
+2025-12-05 18:49:13,031 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 18:49:13,032 - [33mPress CTRL+C to quit[0m
+2025-12-05 18:49:13,047 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:49:14,584 -  * Debugger is active!
+2025-12-05 18:49:14,588 -  * Debugger PIN: 362-277-283
+2025-12-05 18:49:15,918 - 127.0.0.1 - - [05/Dec/2025 18:49:15] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 18:49:16,071 - 127.0.0.1 - - [05/Dec/2025 18:49:16] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 18:49:30,964 - 127.0.0.1 - - [05/Dec/2025 18:49:30] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 18:51:36,226 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 18:51:36,538 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:51:38,392 -  * Debugger is active!
+2025-12-05 18:51:38,396 -  * Debugger PIN: 362-277-283
+2025-12-05 18:52:08,587 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 18:52:08,588 - [33mPress CTRL+C to quit[0m
+2025-12-05 18:52:08,603 -  * Restarting with watchdog (windowsapi)
+2025-12-05 18:52:10,141 -  * Debugger is active!
+2025-12-05 18:52:10,145 -  * Debugger PIN: 362-277-283
+2025-12-05 18:52:12,012 - 127.0.0.1 - - [05/Dec/2025 18:52:12] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 18:52:12,202 - 127.0.0.1 - - [05/Dec/2025 18:52:12] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 18:52:18,755 - 127.0.0.1 - - [05/Dec/2025 18:52:18] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 18:52:32,893 - 127.0.0.1 - - [05/Dec/2025 18:52:32] "GET /dashboard?active_tab=account HTTP/1.1" 200 -
+2025-12-05 18:52:47,143 - 127.0.0.1 - - [05/Dec/2025 18:52:47] "[32mPOST /user/update_profile HTTP/1.1[0m" 302 -
+2025-12-05 18:52:47,190 - 127.0.0.1 - - [05/Dec/2025 18:52:47] "GET /dashboard?active_tab=account HTTP/1.1" 200 -
+2025-12-05 18:52:53,049 - 127.0.0.1 - - [05/Dec/2025 18:52:53] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 18:53:07,430 - 127.0.0.1 - - [05/Dec/2025 18:53:07] "[32mPOST /update_target HTTP/1.1[0m" 302 -
+2025-12-05 18:53:07,481 - 127.0.0.1 - - [05/Dec/2025 18:53:07] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 18:53:24,018 - 127.0.0.1 - - [05/Dec/2025 18:53:24] "GET /api/history/5 HTTP/1.1" 200 -
+2025-12-05 19:17:18,209 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\db_manager.py', reloading
+2025-12-05 19:17:18,683 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:18:07,667 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 19:18:07,667 - [33mPress CTRL+C to quit[0m
+2025-12-05 19:18:07,684 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:18:08,754 -  * Debugger is active!
+2025-12-05 19:18:08,757 -  * Debugger PIN: 362-277-283
+2025-12-05 19:18:10,350 - 127.0.0.1 - - [05/Dec/2025 19:18:10] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 19:18:10,525 - 127.0.0.1 - - [05/Dec/2025 19:18:10] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:18:19,637 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 19:18:19,952 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:18:21,649 -  * Debugger is active!
+2025-12-05 19:18:21,653 -  * Debugger PIN: 362-277-283
+2025-12-05 19:18:24,870 - 127.0.0.1 - - [05/Dec/2025 19:18:24] "[32mPOST /update_target HTTP/1.1[0m" 302 -
+2025-12-05 19:18:24,968 - 127.0.0.1 - - [05/Dec/2025 19:18:24] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 19:19:06,610 - 127.0.0.1 - - [05/Dec/2025 19:19:06] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
+2025-12-05 19:19:06,678 - 127.0.0.1 - - [05/Dec/2025 19:19:06] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 19:19:23,855 - 127.0.0.1 - - [05/Dec/2025 19:19:23] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 19:19:33,524 - 127.0.0.1 - - [05/Dec/2025 19:19:33] "[32mGET /trigger_news HTTP/1.1[0m" 302 -
+2025-12-05 19:19:33,601 - 127.0.0.1 - - [05/Dec/2025 19:19:33] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 19:20:05,885 - 127.0.0.1 - - [05/Dec/2025 19:20:05] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 19:20:16,680 - 127.0.0.1 - - [05/Dec/2025 19:20:16] "[32mGET /delete_cart/2 HTTP/1.1[0m" 302 -
+2025-12-05 19:20:16,740 - 127.0.0.1 - - [05/Dec/2025 19:20:16] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 19:20:17,704 - 127.0.0.1 - - [05/Dec/2025 19:20:17] "[32mGET /delete_cart/3 HTTP/1.1[0m" 302 -
+2025-12-05 19:20:17,784 - 127.0.0.1 - - [05/Dec/2025 19:20:17] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 19:20:19,833 - 127.0.0.1 - - [05/Dec/2025 19:20:19] "[32mGET /delete_cart/1 HTTP/1.1[0m" 302 -
+2025-12-05 19:20:19,900 - 127.0.0.1 - - [05/Dec/2025 19:20:19] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 19:20:33,128 - 127.0.0.1 - - [05/Dec/2025 19:20:33] "[32mPOST /update_target HTTP/1.1[0m" 302 -
+2025-12-05 19:20:33,199 - 127.0.0.1 - - [05/Dec/2025 19:20:33] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 19:22:24,674 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\numpy\\_typing\\_scalars.py', reloading
+2025-12-05 19:22:25,345 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:22:27,106 -  * Debugger is active!
+2025-12-05 19:22:27,112 -  * Debugger PIN: 362-277-283
+2025-12-05 19:22:27,873 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 19:22:28,335 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:22:30,046 -  * Debugger is active!
+2025-12-05 19:22:30,050 -  * Debugger PIN: 362-277-283
+2025-12-05 19:22:49,663 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 19:22:49,663 - [33mPress CTRL+C to quit[0m
+2025-12-05 19:22:49,679 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:22:51,122 -  * Debugger is active!
+2025-12-05 19:22:51,127 -  * Debugger PIN: 362-277-283
+2025-12-05 19:23:40,745 - 127.0.0.1 - - [05/Dec/2025 19:23:40] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 19:23:40,920 - 127.0.0.1 - - [05/Dec/2025 19:23:40] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:26:13,405 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 19:26:13,405 - [33mPress CTRL+C to quit[0m
+2025-12-05 19:26:13,420 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:26:14,923 -  * Debugger is active!
+2025-12-05 19:26:14,928 -  * Debugger PIN: 362-277-283
+2025-12-05 19:26:17,024 - 127.0.0.1 - - [05/Dec/2025 19:26:17] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 19:26:17,201 - 127.0.0.1 - - [05/Dec/2025 19:26:17] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:28:20,745 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 19:28:20,746 - [33mPress CTRL+C to quit[0m
+2025-12-05 19:28:20,760 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:28:22,383 -  * Debugger is active!
+2025-12-05 19:28:22,386 -  * Debugger PIN: 362-277-283
+2025-12-05 19:28:25,045 - 127.0.0.1 - - [05/Dec/2025 19:28:25] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 19:28:25,230 - 127.0.0.1 - - [05/Dec/2025 19:28:25] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:31:39,094 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 19:31:39,095 - [33mPress CTRL+C to quit[0m
+2025-12-05 19:31:39,113 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:31:40,629 -  * Debugger is active!
+2025-12-05 19:31:40,633 -  * Debugger PIN: 362-277-283
+2025-12-05 19:31:44,054 - 127.0.0.1 - - [05/Dec/2025 19:31:44] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 19:31:44,228 - 127.0.0.1 - - [05/Dec/2025 19:31:44] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:33:48,785 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\db_manager.py', reloading
+2025-12-05 19:33:49,069 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:33:50,777 -  * Debugger is active!
+2025-12-05 19:33:50,781 -  * Debugger PIN: 362-277-283
+2025-12-05 19:33:51,775 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\db_manager.py', reloading
+2025-12-05 19:33:52,051 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:33:53,888 -  * Debugger is active!
+2025-12-05 19:33:53,892 -  * Debugger PIN: 362-277-283
+2025-12-05 19:38:35,930 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 19:38:35,930 - [33mPress CTRL+C to quit[0m
+2025-12-05 19:38:35,946 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:38:37,298 -  * Debugger is active!
+2025-12-05 19:38:37,302 -  * Debugger PIN: 362-277-283
+2025-12-05 19:38:44,763 - 127.0.0.1 - - [05/Dec/2025 19:38:44] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 19:38:44,946 - 127.0.0.1 - - [05/Dec/2025 19:38:44] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:40:47,714 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 19:40:47,715 - [33mPress CTRL+C to quit[0m
+2025-12-05 19:40:47,730 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:40:49,312 -  * Debugger is active!
+2025-12-05 19:40:49,317 -  * Debugger PIN: 362-277-283
+2025-12-05 19:40:51,059 - 127.0.0.1 - - [05/Dec/2025 19:40:51] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 19:40:51,173 - 127.0.0.1 - - [05/Dec/2025 19:40:51] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:41:00,804 - 127.0.0.1 - - [05/Dec/2025 19:41:00] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
+2025-12-05 19:41:00,863 - 127.0.0.1 - - [05/Dec/2025 19:41:00] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 19:45:05,169 - 
+SERVER RESTART | Session: 2329724b
+
+2025-12-05 19:45:05,215 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 19:45:05,216 - [33mPress CTRL+C to quit[0m
+2025-12-05 19:45:05,233 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:45:06,747 - 
+SERVER RESTART | Session: 9df1f7e8
+
+2025-12-05 19:45:06,772 -  * Debugger is active!
+2025-12-05 19:45:06,776 -  * Debugger PIN: 362-277-283
+2025-12-05 19:45:08,413 - 127.0.0.1 - - [05/Dec/2025 19:45:08] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 19:45:08,593 - 127.0.0.1 - - [05/Dec/2025 19:45:08] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:45:19,576 - [9df1f7e8] Requesting: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 19:45:23,732 - [9df1f7e8] Title found but NO price.
+2025-12-05 19:45:23,848 - 127.0.0.1 - - [05/Dec/2025 19:45:23] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 19:45:23,898 - 127.0.0.1 - - [05/Dec/2025 19:45:23] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:45:26,512 - 127.0.0.1 - - [05/Dec/2025 19:45:26] "GET /api/history/1 HTTP/1.1" 200 -
+2025-12-05 19:45:40,209 - [9df1f7e8] Requesting: https://www.amazon.com/dp/B0G4X8S2WR
+2025-12-05 19:45:44,647 - [9df1f7e8] Title found but NO price.
+2025-12-05 19:45:44,828 - 127.0.0.1 - - [05/Dec/2025 19:45:44] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 19:45:44,882 - 127.0.0.1 - - [05/Dec/2025 19:45:44] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:46:04,046 - [9df1f7e8] Requesting: https://www.amazon.com/dp/B0CJT5DJ16
+2025-12-05 19:46:07,980 - [9df1f7e8] Found Price: $178.99
+2025-12-05 19:46:08,086 - 127.0.0.1 - - [05/Dec/2025 19:46:08] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 19:46:08,140 - 127.0.0.1 - - [05/Dec/2025 19:46:08] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:46:11,212 - 127.0.0.1 - - [05/Dec/2025 19:46:11] "[32mGET /delete_cart/2 HTTP/1.1[0m" 302 -
+2025-12-05 19:46:11,268 - 127.0.0.1 - - [05/Dec/2025 19:46:11] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:46:13,165 - 127.0.0.1 - - [05/Dec/2025 19:46:13] "[32mGET /delete_cart/1 HTTP/1.1[0m" 302 -
+2025-12-05 19:46:13,216 - 127.0.0.1 - - [05/Dec/2025 19:46:13] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:46:45,802 - [9df1f7e8] Requesting: https://www.amazon.com/dp/B0DZ77HGYQ
+2025-12-05 19:46:50,572 - [9df1f7e8] Found Price: $449.0
+2025-12-05 19:46:50,710 - 127.0.0.1 - - [05/Dec/2025 19:46:50] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 19:46:50,751 - 127.0.0.1 - - [05/Dec/2025 19:46:50] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:47:04,721 - 127.0.0.1 - - [05/Dec/2025 19:47:04] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-12-05 19:47:04,737 - 127.0.0.1 - - [05/Dec/2025 19:47:04] "GET /login HTTP/1.1" 200 -
+2025-12-05 19:47:12,370 - 127.0.0.1 - - [05/Dec/2025 19:47:12] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 19:47:12,407 - 127.0.0.1 - - [05/Dec/2025 19:47:12] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:47:23,514 - [9df1f7e8] Requesting: https://www.amazon.com/dp/B0DZ77HGYQ
+2025-12-05 19:47:27,210 - [9df1f7e8] Found Price: $449.0
+2025-12-05 19:47:27,292 - 127.0.0.1 - - [05/Dec/2025 19:47:27] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 19:47:27,324 - 127.0.0.1 - - [05/Dec/2025 19:47:27] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:50:21,008 - 
+SERVER RESTART | Session: 0c707461
+
+2025-12-05 19:50:21,057 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 19:50:21,057 - [33mPress CTRL+C to quit[0m
+2025-12-05 19:50:21,074 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:50:22,570 - 
+SERVER RESTART | Session: ea1b771e
+
+2025-12-05 19:50:22,608 -  * Debugger is active!
+2025-12-05 19:50:22,613 -  * Debugger PIN: 362-277-283
+2025-12-05 19:50:22,652 - 127.0.0.1 - - [05/Dec/2025 19:50:22] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 19:50:22,788 - 127.0.0.1 - - [05/Dec/2025 19:50:22] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:50:27,364 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\flask\\app.py', reloading
+2025-12-05 19:50:27,717 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:50:29,379 - 
+SERVER RESTART | Session: 232ceda3
+
+2025-12-05 19:50:29,407 -  * Debugger is active!
+2025-12-05 19:50:29,410 -  * Debugger PIN: 362-277-283
+2025-12-05 19:50:29,493 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\flask\\templating.py', reloading
+2025-12-05 19:50:29,672 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:50:31,072 - 
+SERVER RESTART | Session: b30e3cd3
+
+2025-12-05 19:50:31,097 -  * Debugger is active!
+2025-12-05 19:50:31,102 -  * Debugger PIN: 362-277-283
+2025-12-05 19:50:34,793 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\jinja2\\environment.py', reloading
+2025-12-05 19:50:35,153 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:50:36,752 - 
+SERVER RESTART | Session: 623e8e4f
+
+2025-12-05 19:50:36,787 -  * Debugger is active!
+2025-12-05 19:50:36,792 -  * Debugger PIN: 362-277-283
+2025-12-05 19:50:37,639 -  * Detected change in 'C:\\Users\\sushm\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\werkzeug\\routing\\map.py', reloading
+2025-12-05 19:50:37,975 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:50:39,570 - 
+SERVER RESTART | Session: 1a1903ea
+
+2025-12-05 19:50:39,596 -  * Debugger is active!
+2025-12-05 19:50:39,602 -  * Debugger PIN: 362-277-283
+2025-12-05 19:50:41,016 - 127.0.0.1 - - [05/Dec/2025 19:50:41] "[35m[1mGET /dashboard?active_tab=news HTTP/1.1[0m" 500 -
+2025-12-05 19:50:41,166 - 127.0.0.1 - - [05/Dec/2025 19:50:41] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-05 19:50:41,170 - 127.0.0.1 - - [05/Dec/2025 19:50:41] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-05 19:50:41,215 - 127.0.0.1 - - [05/Dec/2025 19:50:41] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=UeaCFXLk0ZMHFbIMUnw1 HTTP/1.1" 200 -
+2025-12-05 19:52:30,558 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 19:52:30,976 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:52:35,567 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 19:52:35,568 - [33mPress CTRL+C to quit[0m
+2025-12-05 19:52:35,583 -  * Restarting with watchdog (windowsapi)
+2025-12-05 19:52:37,041 -  * Debugger is active!
+2025-12-05 19:52:37,045 -  * Debugger PIN: 362-277-283
+2025-12-05 19:52:45,237 - 127.0.0.1 - - [05/Dec/2025 19:52:45] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 19:52:45,342 - 127.0.0.1 - - [05/Dec/2025 19:52:45] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 19:52:52,365 - 127.0.0.1 - - [05/Dec/2025 19:52:52] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 19:52:59,960 - 127.0.0.1 - - [05/Dec/2025 19:52:59] "[32mGET /trigger_news HTTP/1.1[0m" 302 -
+2025-12-05 19:53:00,054 - 127.0.0.1 - - [05/Dec/2025 19:53:00] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 19:53:06,529 - 127.0.0.1 - - [05/Dec/2025 19:53:06] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 19:53:10,465 - 127.0.0.1 - - [05/Dec/2025 19:53:10] "GET /dashboard?active_tab=account HTTP/1.1" 200 -
+2025-12-05 19:53:13,013 - 127.0.0.1 - - [05/Dec/2025 19:53:13] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 20:06:32,245 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 20:06:32,246 - [33mPress CTRL+C to quit[0m
+2025-12-05 20:06:32,261 -  * Restarting with watchdog (windowsapi)
+2025-12-05 20:06:33,732 -  * Debugger is active!
+2025-12-05 20:06:33,736 -  * Debugger PIN: 362-277-283
+2025-12-05 20:06:35,061 - 127.0.0.1 - - [05/Dec/2025 20:06:35] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 20:06:35,184 - 127.0.0.1 - - [05/Dec/2025 20:06:35] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 20:06:46,179 - 127.0.0.1 - - [05/Dec/2025 20:06:46] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 20:06:49,808 - 127.0.0.1 - - [05/Dec/2025 20:06:49] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-12-05 20:06:49,832 - 127.0.0.1 - - [05/Dec/2025 20:06:49] "GET /login HTTP/1.1" 200 -
+2025-12-05 20:06:55,300 - 127.0.0.1 - - [05/Dec/2025 20:06:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 20:06:55,368 - 127.0.0.1 - - [05/Dec/2025 20:06:55] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 20:07:01,540 - [71d7ad7c] Starting Job...
+2025-12-05 20:07:01,569 - [71d7ad7c] Requesting: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 20:07:05,633 - [71d7ad7c] Title found but NO price.
+2025-12-05 20:07:05,634 - [71d7ad7c] Requesting: https://www.amazon.com/dp/B0G4X8S2WR
+2025-12-05 20:07:10,351 - [71d7ad7c] Title found but NO price.
+2025-12-05 20:07:10,352 - [71d7ad7c] Requesting: https://www.amazon.com/dp/B0CJT5DJ16
+2025-12-05 20:07:14,892 - [71d7ad7c] Found Price: $178.99
+2025-12-05 20:07:14,903 - [71d7ad7c] Requesting: https://www.amazon.com/dp/B0DZ77HGYQ
+2025-12-05 20:07:18,009 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\setup.py', reloading
+2025-12-05 20:07:18,520 -  * Restarting with watchdog (windowsapi)
+2025-12-05 20:07:20,179 -  * Debugger is active!
+2025-12-05 20:07:20,183 -  * Debugger PIN: 362-277-283
+2025-12-05 20:07:20,214 - [06424834] Starting Job...
+2025-12-05 20:07:20,254 - [06424834] Requesting: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 20:07:25,659 - [06424834] Title found but NO price.
+2025-12-05 20:07:25,660 - [06424834] Requesting: https://www.amazon.com/dp/B0G4X8S2WR
+2025-12-05 20:07:27,296 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\setup.py', reloading
+2025-12-05 20:07:27,727 -  * Restarting with watchdog (windowsapi)
+2025-12-05 20:07:29,558 -  * Debugger is active!
+2025-12-05 20:07:29,562 -  * Debugger PIN: 362-277-283
+2025-12-05 20:07:32,733 - [a041f88b] Starting Job...
+2025-12-05 20:07:32,773 - [a041f88b] Requesting: https://www.amazon.com/dp/B0DZ76BN5D
+2025-12-05 20:08:03,801 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 20:08:03,802 - [33mPress CTRL+C to quit[0m
+2025-12-05 20:08:03,818 -  * Restarting with watchdog (windowsapi)
+2025-12-05 20:08:05,493 -  * Debugger is active!
+2025-12-05 20:08:05,500 -  * Debugger PIN: 362-277-283
+2025-12-05 20:08:05,533 - 127.0.0.1 - - [05/Dec/2025 20:08:05] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 20:08:05,653 - 127.0.0.1 - - [05/Dec/2025 20:08:05] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 20:08:05,953 - [528be9bd] Starting Job...
+2025-12-05 20:08:05,975 - 127.0.0.1 - - [05/Dec/2025 20:08:05] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
+2025-12-05 20:08:06,043 - 127.0.0.1 - - [05/Dec/2025 20:08:06] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 20:12:06,195 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\setup.py', reloading
+2025-12-05 20:12:06,620 -  * Restarting with watchdog (windowsapi)
+2025-12-05 20:12:08,696 -  * Debugger is active!
+2025-12-05 20:12:08,700 -  * Debugger PIN: 362-277-283
+2025-12-05 20:12:17,440 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\scraper.py', reloading
+2025-12-05 20:12:17,741 -  * Restarting with watchdog (windowsapi)
+2025-12-05 20:12:19,498 -  * Debugger is active!
+2025-12-05 20:12:19,501 -  * Debugger PIN: 362-277-283
+2025-12-05 20:12:21,772 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 20:12:21,992 -  * Restarting with watchdog (windowsapi)
+2025-12-05 20:12:23,557 -  * Debugger is active!
+2025-12-05 20:12:23,563 -  * Debugger PIN: 362-277-283
+2025-12-05 20:12:53,666 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\app.py', reloading
+2025-12-05 20:12:53,961 -  * Restarting with watchdog (windowsapi)
+2025-12-05 20:13:18,771 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 20:13:18,772 - [33mPress CTRL+C to quit[0m
+2025-12-05 20:13:18,788 -  * Restarting with watchdog (windowsapi)
+2025-12-05 20:13:20,273 -  * Debugger is active!
+2025-12-05 20:13:20,278 -  * Debugger PIN: 362-277-283
+2025-12-05 20:13:22,457 - 127.0.0.1 - - [05/Dec/2025 20:13:22] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 20:13:22,656 - 127.0.0.1 - - [05/Dec/2025 20:13:22] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 20:13:26,376 - 127.0.0.1 - - [05/Dec/2025 20:13:26] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-12-05 20:13:26,398 - 127.0.0.1 - - [05/Dec/2025 20:13:26] "GET /login HTTP/1.1" 200 -
+2025-12-05 20:13:34,148 - 127.0.0.1 - - [05/Dec/2025 20:13:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-12-05 20:13:34,238 - 127.0.0.1 - - [05/Dec/2025 20:13:34] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 20:13:38,055 - 127.0.0.1 - - [05/Dec/2025 20:13:38] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 20:13:39,281 - 127.0.0.1 - - [05/Dec/2025 20:13:39] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 20:13:54,400 - [5d5f9d87] Title found but NO price.
+2025-12-05 20:13:54,514 - 127.0.0.1 - - [05/Dec/2025 20:13:54] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 20:13:54,592 - 127.0.0.1 - - [05/Dec/2025 20:13:54] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 20:14:44,937 - 127.0.0.1 - - [05/Dec/2025 20:14:44] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 20:14:44,997 - 127.0.0.1 - - [05/Dec/2025 20:14:44] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 20:14:53,705 - [5d5f9d87] Title found but NO price.
+2025-12-05 20:14:53,802 - 127.0.0.1 - - [05/Dec/2025 20:14:53] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 20:14:53,863 - 127.0.0.1 - - [05/Dec/2025 20:14:53] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 20:15:44,602 -  * Detected change in 'C:\\Users\\sushm\\OneDrive\\backup\\NEU\\NEU Courses\\SEM1\\DBMS\\Project\\V2\\scraper.py', reloading
+2025-12-05 20:15:45,059 -  * Restarting with watchdog (windowsapi)
+2025-12-05 20:15:51,369 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-05 20:15:51,370 - [33mPress CTRL+C to quit[0m
+2025-12-05 20:15:51,387 -  * Restarting with watchdog (windowsapi)
+2025-12-05 20:15:52,918 -  * Debugger is active!
+2025-12-05 20:15:52,922 -  * Debugger PIN: 362-277-283
+2025-12-05 20:16:05,065 - 127.0.0.1 - - [05/Dec/2025 20:16:05] "[32mGET / HTTP/1.1[0m" 302 -
+2025-12-05 20:16:05,140 - 127.0.0.1 - - [05/Dec/2025 20:16:05] "GET /dashboard HTTP/1.1" 200 -
+2025-12-05 20:16:21,921 - [0f3cdef7] Requesting URL: https://www.amazon.com/dp/B0CJT5DJ16
+2025-12-05 20:16:24,911 - [0f3cdef7] Found Price: $178.99
+2025-12-05 20:16:25,090 - 127.0.0.1 - - [05/Dec/2025 20:16:25] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 20:16:25,157 - 127.0.0.1 - - [05/Dec/2025 20:16:25] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 20:16:43,971 - [0f3cdef7] Requesting URL: https://www.amazon.com/dp/B0DZ75TN5F
+2025-12-05 20:16:45,724 - [0f3cdef7] Title found but NO price.
+2025-12-05 20:16:45,864 - 127.0.0.1 - - [05/Dec/2025 20:16:45] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 20:16:45,932 - 127.0.0.1 - - [05/Dec/2025 20:16:45] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 20:17:04,675 - [0f3cdef7] Requesting URL: https://www.amazon.com/dp/B0FWD1MS82
+2025-12-05 20:17:06,479 - [0f3cdef7] Found Price: $1199.0
+2025-12-05 20:17:06,615 - 127.0.0.1 - - [05/Dec/2025 20:17:06] "[32mPOST /user/create_product HTTP/1.1[0m" 302 -
+2025-12-05 20:17:06,678 - 127.0.0.1 - - [05/Dec/2025 20:17:06] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 20:17:11,966 - 127.0.0.1 - - [05/Dec/2025 20:17:11] "[32mGET /delete_cart/4 HTTP/1.1[0m" 302 -
+2025-12-05 20:17:12,020 - 127.0.0.1 - - [05/Dec/2025 20:17:12] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 20:17:13,578 - 127.0.0.1 - - [05/Dec/2025 20:17:13] "[32mGET /delete_cart/2 HTTP/1.1[0m" 302 -
+2025-12-05 20:17:13,652 - 127.0.0.1 - - [05/Dec/2025 20:17:13] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 20:17:15,364 - 127.0.0.1 - - [05/Dec/2025 20:17:15] "GET /api/history/4 HTTP/1.1" 200 -
+2025-12-05 20:17:18,638 - [0f3cdef7] Starting Direct Link Job...
+2025-12-05 20:17:18,655 - [0f3cdef7] Requesting URL: https://www.amazon.com/dp/B0DZ77HGYQ
+2025-12-05 20:17:20,635 - [0f3cdef7] Found Price: $449.0
+2025-12-05 20:17:22,672 - [0f3cdef7] Requesting URL: https://www.amazon.com/dp/B0CJT5DJ16
+2025-12-05 20:17:24,512 - [0f3cdef7] Found Price: $178.99
+2025-12-05 20:17:26,559 - [0f3cdef7] Requesting URL: https://www.amazon.com/dp/B0DZ75TN5F
+2025-12-05 20:17:28,165 - [0f3cdef7] Title found but NO price.
+2025-12-05 20:17:30,166 - [0f3cdef7] Requesting URL: https://www.amazon.com/dp/B0FWD1MS82
+2025-12-05 20:17:31,888 - [0f3cdef7] Found Price: $1199.0
+2025-12-05 20:17:33,927 - 127.0.0.1 - - [05/Dec/2025 20:17:33] "[32mGET /trigger_scrape HTTP/1.1[0m" 302 -
+2025-12-05 20:17:34,008 - 127.0.0.1 - - [05/Dec/2025 20:17:34] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 20:17:37,418 - 127.0.0.1 - - [05/Dec/2025 20:17:37] "GET /api/history/4 HTTP/1.1" 200 -
+2025-12-05 20:17:42,636 - 127.0.0.1 - - [05/Dec/2025 20:17:42] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 20:17:49,799 - 127.0.0.1 - - [05/Dec/2025 20:17:49] "[32mGET /trigger_news HTTP/1.1[0m" 302 -
+2025-12-05 20:17:49,883 - 127.0.0.1 - - [05/Dec/2025 20:17:49] "GET /dashboard?active_tab=news HTTP/1.1" 200 -
+2025-12-05 20:17:52,897 - 127.0.0.1 - - [05/Dec/2025 20:17:52] "GET /dashboard?active_tab=account HTTP/1.1" 200 -
+2025-12-05 20:17:57,022 - 127.0.0.1 - - [05/Dec/2025 20:17:57] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 20:18:03,785 - 127.0.0.1 - - [05/Dec/2025 20:18:03] "[32mPOST /update_target HTTP/1.1[0m" 302 -
+2025-12-05 20:18:03,850 - 127.0.0.1 - - [05/Dec/2025 20:18:03] "GET /dashboard?active_tab=radar HTTP/1.1" 200 -
+2025-12-05 20:18:12,721 - 127.0.0.1 - - [05/Dec/2025 20:18:12] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-12-05 20:18:12,737 - 127.0.0.1 - - [05/Dec/2025 20:18:12] "GET /login HTTP/1.1" 200 -

@@ -8,6 +8,7 @@ import utils
 
 logger = logging.getLogger(__name__)
 
+# 1. Setup CloudScraper (Your working configuration)
 scraper = cloudscraper.create_scraper(
     browser={'browser': 'chrome', 'platform': 'windows', 'desktop': True}
 )
@@ -19,7 +20,11 @@ scraper.headers.update({
 
 def clean_price(price_str):
     try:
-        if " to " in price_str: price_str = price_str.split(" to ")[0]
+        if not price_str: return None
+        # Fix for ranges like "$10.99 - $20.00" -> takes 10.99
+        if "to" in price_str: price_str = price_str.split("to")[0]
+        if "-" in price_str: price_str = price_str.split("-")[0]
+        
         clean = re.sub(r'[^\d.]', '', price_str)
         return float(clean)
     except:
@@ -27,7 +32,8 @@ def clean_price(price_str):
 
 def clean_amazon_url(url):
     try:
-        match = re.search(r'/(dp|gp/product)/(B[A-Z0-9]{9})', url)
+        # Strips tracking params to avoid "Invalid Link" errors
+        match = re.search(r'/(dp|gp/product)/([A-Z0-9]{10})', url)
         if match:
             asin = match.group(2)
             return f"https://www.amazon.com/dp/{asin}", asin
@@ -39,6 +45,7 @@ def scrape_direct_url(url, sid="NO-ID"):
     logger.info(f"[{sid}] Requesting URL: {clean_url}")
     
     try:
+        # 2. Fetch the page
         resp = scraper.get(clean_url, timeout=15)
         if resp.status_code != 200:
             logger.error(f"[{sid}] Amazon Status: {resp.status_code}")
@@ -50,13 +57,25 @@ def scrape_direct_url(url, sid="NO-ID"):
             logger.warning(f"[{sid}] Amazon CAPTCHA detected.")
             return None, None
 
+        # 3. Extract Title
         title_tag = soup.select_one("#productTitle") or soup.select_one("h1")
-        # Sanitize Title immediately
         raw_title = title_tag.text.strip() if title_tag else f"Amazon Item ({asin})"
         title = utils.safe_log(raw_title)
 
+        # 4. EXTRACT PRICE (The Fix)
+        # We prioritize the "Center Column" or "Core Price Div" to avoid sidebar accessories.
         price_val = None
-        price_tag = soup.select_one("span.a-price span.a-offscreen") or soup.select_one("#priceblock_ourprice") or soup.select_one(".apexPriceToPay span.a-offscreen")
+        
+        # Selector A: The "Apex" Price (Big deal price in middle of screen)
+        price_tag = soup.select_one("#corePriceDisplay_desktop_feature_div .apexPriceToPay span.a-offscreen")
+        
+        # Selector B: The Standard Price block (Middle of screen)
+        if not price_tag:
+            price_tag = soup.select_one("#corePrice_feature_div span.a-offscreen")
+            
+        # Selector C: Fallback to your old logic if A and B fail
+        if not price_tag:
+            price_tag = soup.select_one("span.a-price span.a-offscreen") or soup.select_one("#priceblock_ourprice")
         
         if price_tag:
             price_val = clean_price(price_tag.text)
@@ -69,6 +88,8 @@ def scrape_direct_url(url, sid="NO-ID"):
     except Exception as e:
         logger.error(f"[{sid}] Scrape Error: {e}")
         return None, None
+
+# --- JOB FUNCTIONS (Required by app.py) ---
 
 def run_scraper_job(sid="NO-ID"):
     logger.info(f"[{sid}] Starting Direct Link Job...")
@@ -91,7 +112,7 @@ def run_scraper_job(sid="NO-ID"):
             db_manager.call_insert_price_procedure(int(pid), int(amazon_id), float(price), url)
             success += 1
         count += 1
-        time.sleep(2) 
+        time.sleep(2) # Polite delay
 
     return f"Scanned {count} links. Updated {success} prices."
 

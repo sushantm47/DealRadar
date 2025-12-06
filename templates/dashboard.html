@@ -1,171 +1,296 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DealRadar | Smart Price Tracker</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<div id="loadingOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(255,255,255,0.8); z-index:9999; text-align:center; padding-top:20%;">
-    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;"></div>
-    <h4 class="mt-4 fw-bold text-dark">Scanning Amazon...</h4>
+    <style>
+        :root { --sidebar-width: 260px; --sidebar-bg: #0f172a; --primary: #4f46e5; --bg-body: #f8fafc; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-body); color: #334155; overflow-x: hidden; }
+        
+        #loadingOverlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(4px); z-index: 10000; text-align: center; padding-top: 20%; }
+        
+        .sidebar { width: var(--sidebar-width); height: 100vh; background-color: var(--sidebar-bg); position: fixed; top: 0; left: 0; padding: 1.5rem; color: #94a3b8; display: flex; flex-direction: column; z-index: 1000; }
+        .sidebar-brand { color: white; font-size: 1.25rem; font-weight: 700; margin-bottom: 2rem; display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .nav-link { color: #94a3b8; padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 12px; font-weight: 500; transition: all 0.2s; }
+        .nav-link:hover { color: white; background-color: rgba(255,255,255,0.05); }
+        .nav-link.active { background-color: var(--primary); color: white; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3); }
+
+        .main-content { margin-left: var(--sidebar-width); padding: 2rem; min-height: 100vh; }
+        .card { border: none; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); background: white; }
+        .product-title { font-weight: 600; color: #0f172a; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.4; }
+        .table-deal-row { background-color: #f0fdf4 !important; }
+        .toast-container { position: fixed; top: 20px; right: 20px; z-index: 9999; }
+        .btn-primary { background-color: var(--primary); border-color: var(--primary); }
+    </style>
+</head>
+<body>
+
+<div id="loadingOverlay">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"></div>
+    <h4 class="mt-3 fw-bold text-dark">Processing...</h4>
 </div>
 
-<div class="row g-4">
-    <div class="col-lg-8">
-        
-        <div class="d-flex justify-content-between align-items-end mb-4">
-            <div>
-                <h2 class="fw-bold mb-1">Dashboard</h2>
-                <p class="text-muted mb-0">Manage your tracked items.</p>
+<div class="toast-container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            <div class="toast align-items-center show shadow-lg border-0" role="alert">
+                <div class="d-flex">
+                    <div class="toast-body"><i class="fas fa-info-circle me-2 text-{{ 'primary' if category=='info' else category }}"></i> {{ message }}</div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
             </div>
-            <a href="{{ url_for('trigger_scrape') }}" class="btn btn-warning shadow-sm" onclick="showLoading()">
-                <i class="fas fa-sync-alt me-1"></i> Check Prices
-            </a>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+
+<div class="sidebar">
+    <a href="#" class="sidebar-brand"><i class="fas fa-radar text-primary"></i> DealRadar</a>
+    <nav class="nav flex-column flex-grow-1">
+        <a href="{{ url_for('dashboard', active_tab='radar') }}" class="nav-link {{ 'active' if active_tab == 'radar' else '' }}"><i class="fas fa-chart-line"></i> My Radar</a>
+        <a href="{{ url_for('dashboard', active_tab='news') }}" class="nav-link {{ 'active' if active_tab == 'news' else '' }}"><i class="fas fa-newspaper"></i> News & Deals</a>
+        <a href="{{ url_for('dashboard', active_tab='account') }}" class="nav-link {{ 'active' if active_tab == 'account' else '' }}"><i class="fas fa-user-cog"></i> Account</a>
+    </nav>
+    <div class="mt-auto pt-4 border-top border-secondary">
+        <div class="d-flex align-items-center mb-3 text-white small">
+            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-2" style="width:32px; height:32px;">{{ user_info.fname[0] }}</div>
+            <div><div class="fw-bold">{{ user_info.fname }}</div></div>
+        </div>
+        <a href="{{ url_for('logout') }}" class="btn btn-outline-secondary btn-sm w-100 text-light border-secondary">Logout</a>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="d-flex justify-content-between align-items-end mb-5">
+        <div>
+            <h2 class="fw-bold text-dark mb-1">{% if active_tab == 'radar' %}My Radar{% elif active_tab == 'news' %}Market Pulse{% else %}Settings{% endif %}</h2>
+            <p class="text-muted mb-0">Smart Tracking Dashboard</p>
+        </div>
+        {% if active_tab == 'radar' %}
+        <button class="btn btn-primary shadow-sm px-4 py-2 fw-medium" data-bs-toggle="modal" data-bs-target="#addModal"><i class="fas fa-plus me-2"></i> Track Product</button>
+        {% endif %}
+    </div>
+
+    {% if active_tab == 'radar' %}
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card p-3 d-flex flex-row align-items-center border-0 shadow-sm">
+                    <div class="bg-light rounded-circle p-3 me-3"><i class="fas fa-box text-secondary fa-lg"></i></div>
+                    <div><h6 class="text-muted mb-0">Tracking</h6><h4 class="fw-bold mb-0">{{ watchlist|length }}</h4></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card p-3 d-flex flex-row align-items-center border-0 shadow-sm">
+                    <div class="bg-success bg-opacity-10 rounded-circle p-3 me-3"><i class="fas fa-bolt text-success fa-lg"></i></div>
+                    <div><h6 class="text-muted mb-0">Active Deals</h6><h4 class="fw-bold mb-0 text-success">{{ deal_count }}</h4></div>
+                </div>
+            </div>
+            <div class="col-md-6 text-end align-self-center">
+                <a href="{{ url_for('trigger_scrape') }}" class="btn btn-white border shadow-sm text-secondary" onclick="showLoading()"><i class="fas fa-sync-alt me-1"></i> Refresh Prices</a>
+            </div>
         </div>
 
-        {% if active_deals %}
-        <div class="card mb-4 border-success border-2 shadow-sm">
-            <div class="card-header bg-success text-white">
-                <i class="fas fa-bolt me-2"></i> <strong>Active Deals!</strong> (Price < Target)
-            </div>
-            <div class="list-group list-group-flush">
-                {% for item in active_deals %}
-                <div class="list-group-item d-flex justify-content-between align-items-center">
-                    <div>
-                        <div class="fw-bold text-success">{{ item.pname[:50] }}...</div>
-                        <small class="text-muted">Target: ${{ item.cutoff }}</small>
-                    </div>
-                    <div class="text-end">
-                        <span class="badge bg-success fs-6">${{ item.current_price }}</span>
-                        <a href="{{ item.tracking_url }}" target="_blank" class="btn btn-sm btn-outline-success ms-2">Buy ↗</a>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
-        
-        <div class="card mb-5">
-            <div class="card-header bg-white"><i class="fas fa-eye me-2 text-primary"></i> Watching</div>
+        <div class="card border-0 shadow-sm overflow-hidden">
             <div class="table-responsive">
-                <table class="table mb-0 align-middle">
-                    <thead class="table-light">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="bg-light">
                         <tr>
-                            <th style="width: 40%;">Product</th>
-                            <th style="width: 20%;">Price</th>
-                            <th style="width: 25%;">Target</th>
-                            <th style="width: 15%; text-align: right;">Actions</th>
+                            <th class="ps-4" style="width:40%">Product</th>
+                            <th style="width:15%">History</th>
+                            <th style="width:15%">Price</th>
+                            <th style="width:10%">Status</th>
+                            <th style="width:15%">Target</th>
+                            <th class="text-end pe-4" style="width:5%"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        {% for item in watchlist %}
-                        <tr>
-                            <td>
-                                <div class="fw-bold text-dark mb-1">{{ item.pname[:40] }}...</div>
-                                <span class="badge bg-light text-secondary border">{{ item.p_category }}</span>
-                            </td>
-                            <td>
-                                {% if item.current_price > 0 %}
-                                    <span class="fs-5 fw-bold text-dark">${{ item.current_price }}</span>
-                                {% else %}
-                                    <span class="text-muted small">Pending...</span>
-                                {% endif %}
-                            </td>
-                            <td>
-                                <form action="{{ url_for('update_target') }}" method="POST" class="d-flex">
-                                    <input type="hidden" name="cid" value="{{ item.cid }}">
-                                    <input type="number" name="new_cutoff" step="0.01" class="form-control form-control-sm me-1" 
-                                           value="{{ item.cutoff if item.cutoff > 0 else '' }}" placeholder="Set Alert">
-                                    <button type="submit" class="btn btn-outline-secondary btn-sm"><i class="fas fa-check"></i></button>
-                                </form>
-                            </td>
-                            <td class="text-end">
-                                <button type="button" class="btn btn-light btn-sm text-primary" data-bs-toggle="modal" data-bs-target="#detailsModal{{ item.cid }}">
-                                    <i class="fas fa-info-circle"></i>
-                                </button>
-                                <a href="{{ url_for('delete_cart', cid=item.cid) }}" class="btn btn-light btn-sm text-danger"><i class="fas fa-trash"></i></a>
-                            </td>
-                        </tr>
-
-                        <div class="modal fade" id="detailsModal{{ item.cid }}" tabindex="-1">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">Product Details</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h6><strong>Full Name:</strong></h6>
-                                        <p>{{ item.pname }}</p>
-                                        <hr>
-                                        <h6><strong>Tracking URL:</strong></h6>
-                                        <p class="small text-muted text-break">{{ item.tracking_url }}</p>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <small class="text-muted">Last Checked</small><br>
-                                                <strong>{{ item.last_checked }}</strong>
-                                            </div>
-                                            <div class="col-6">
-                                                <small class="text-muted">Database ID</small><br>
-                                                <strong>#{{ item.pid }}</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <a href="{{ item.tracking_url }}" target="_blank" class="btn btn-primary w-100">View on Amazon</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {% if watchlist %}
+                            {% for item in watchlist %}
+                            <tr class="{{ 'table-deal-row' if item.is_deal else '' }}">
+                                <td class="ps-4">
+                                    <div class="product-title" title="{{ item.pname }}">{{ item.pname }}</div>
+                                    <span class="badge bg-white text-secondary border mt-1">{{ item.p_category }}</span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline-primary btn-sm shadow-sm border mb-1"
+                                            data-pid="{{ item.pid }}" 
+                                            data-name="{{ item.pname }}" 
+                                            data-desc="{{ item.p_description }}" 
+                                            onclick="openAnalysis(this)">
+                                        <i class="fas fa-chart-line me-1"></i> Analysis
+                                    </button>
+                                    <div class="small text-muted mt-2">Start: ${{ item.first_price }}</div>
+                                </td>
+                                <td>
+                                    {% if item.current_price > 0 %}
+                                        <span class="fs-5 fw-bold text-dark">${{ item.current_price }}</span>
+                                        {% if item.change_pct < 0 %}
+                                            <small class="text-success fw-bold ms-1">{{ item.change_pct }}%</small>
+                                        {% endif %}
+                                    {% else %}
+                                        <span class="badge bg-warning text-dark"><i class="fas fa-hourglass-half"></i> Pending</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if item.is_deal %}
+                                        <span class="badge bg-success text-white px-2 py-1"><i class="fas fa-check me-1"></i> DEAL</span>
+                                    {% else %}
+                                        <span class="badge bg-light text-secondary border">Watching</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <form action="{{ url_for('update_target') }}" method="POST" class="d-flex align-items-center gap-2">
+                                        <input type="hidden" name="cid" value="{{ item.cid }}">
+                                        <input type="number" step="0.01" name="new_cutoff" value="{{ item.cutoff }}" class="form-control form-control-sm" style="width: 80px;" placeholder="0.00">
+                                        <button class="btn btn-light btn-sm border text-primary" title="Save"><i class="fas fa-save"></i></button>
+                                    </form>
+                                </td>
+                                <td class="text-end pe-4">
+                                    <a href="{{ url_for('delete_cart', cid=item.cid) }}" class="text-danger" title="Remove"><i class="fas fa-trash-alt"></i></a>
+                                </td>
+                            </tr>
+                            {% endfor %}
                         {% else %}
-                        <tr><td colspan="4" class="text-center p-5 text-muted">Watchlist is empty.</td></tr>
-                        {% endfor %}
+                            <tr><td colspan="6" class="text-center p-5 text-muted">No items tracked yet.</td></tr>
+                        {% endif %}
                     </tbody>
                 </table>
             </div>
         </div>
-        
-        <h5 class="text-muted mb-3">Logs</h5>
-        <div class="card">
-            <div class="card-header">
-                <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">📜 Notification History</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-body p-0">
-                <ul class="list-group list-group-flush">
-                    {% for alert in history_alerts %}
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <div>
-                            <small class="text-muted">{{ alert.createdat }}</small><br>
-                            <strong>{{ alert.pname[:40] }}...</strong> dropped to <span class="text-success fw-bold">${{ alert.price }}</span>
+
+    {% elif active_tab == 'news' %}
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="fw-bold mb-0">Offers & Events</h4>
+            <a href="{{ url_for('trigger_news') }}" class="btn btn-warning btn-sm rounded-pill px-3 text-white fw-bold shadow-sm" onclick="showLoading()">
+                <i class="bi bi-cloud-download me-1"></i> Scan Latest
+            </a>
+        </div>
+        <div class="row" id="news-container">
+            {% if news_items %}
+                {% for news in news_items %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 overflow-hidden border-0 shadow-sm">
+                        {% if news.image_url %}
+                        <img src="{{ news.image_url }}" class="w-100 h-100 object-fit-cover" style="height: 180px;">
+                        {% endif %}
+                        <div class="card-body d-flex flex-column">
+                            <div class="mb-2">
+                                {% if 'WATCHLIST' in news.tag %}<span class="badge bg-danger shadow-sm">MATCH</span>
+                                {% elif 'UPCOMING' in news.tag %}<span class="badge bg-warning text-dark shadow-sm">EVENT</span>
+                                {% else %}<span class="badge bg-primary shadow-sm">DEAL</span>{% endif %}
+                                <small class="text-muted ms-2">{{ news.published_at }}</small>
+                            </div>
+                            <h6 class="card-title fw-bold mb-3"><a href="{{ news.n_url }}" target="_blank" class="text-decoration-none text-dark stretched-link">{{ news.title }}</a></h6>
                         </div>
-                        <span class="badge bg-light text-dark">History</span>
-                    </li>
-                    {% else %}
-                    <li class="list-group-item text-center text-muted p-4">No history yet.</li>
-                    {% endfor %}
-                </ul>
-            </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12 text-center py-5 text-muted"><h5>No Deals Found</h5></div>
+            {% endif %}
         </div>
 
-    </div>
+    {% elif active_tab == 'account' %}
+        <div class="card p-4 mx-auto border-0 shadow-sm" style="max-width: 600px;">
+            <h5 class="fw-bold mb-4">Edit Profile</h5>
+            <form action="{{ url_for('update_profile') }}" method="POST">
+                <div class="row g-3">
+                    <div class="col-md-6"><label class="form-label small text-muted fw-bold">First Name</label><input type="text" name="fname" class="form-control bg-light" value="{{ user_info.fname }}"></div>
+                    <div class="col-md-6"><label class="form-label small text-muted fw-bold">Last Name</label><input type="text" name="lname" class="form-control bg-light" value="{{ user_info.lname }}"></div>
+                    <div class="col-12"><label class="form-label small text-muted fw-bold">Email Address</label><input type="email" name="email" class="form-control bg-light" value="{{ user_info.email }}"></div>
+                    <div class="col-12 mt-3"><button type="submit" class="btn btn-dark px-4">Save Changes</button></div>
+                </div>
+            </form>
+        </div>
+    {% endif %}
+</div>
 
-    <div class="col-lg-4">
-        <div class="card shadow border-primary mb-3">
-            <div class="card-header bg-primary text-white"><strong>+ Add Amazon Item</strong></div>
-            <div class="card-body bg-light">
+<div class="modal fade" id="addModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold">Track New Product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
                 <form action="{{ url_for('user_create_product') }}" method="POST" onsubmit="showLoading()">
                     <div class="mb-3">
-                        <input type="text" name="pname_or_link" class="form-control" placeholder="Paste Amazon URL..." required>
+                        <label class="form-label small fw-bold text-muted">AMAZON URL</label>
+                        <input type="text" name="pname_or_link" class="form-control form-control-lg bg-light" placeholder="https://amazon.com/dp/..." required>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Fetch & Track</button>
+                    <div class="d-grid"><button type="submit" class="btn btn-primary btn-lg">Start Tracking</button></div>
                 </form>
             </div>
         </div>
     </div>
 </div>
 
+<div class="modal fade" id="analysisModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title fw-bold" id="graphTitle">Price History</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p id="graphDesc" class="text-muted small mb-3"></p>
+                <div class="card bg-light border-0 p-3 rounded-4">
+                    <canvas id="priceChart" style="height: 300px; width: 100%;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-function showLoading() { document.getElementById('loadingOverlay').style.display = 'block'; }
+    function showLoading() { document.getElementById('loadingOverlay').style.display = 'block'; }
+    window.onload = function() { [].slice.call(document.querySelectorAll('.toast')).map(function(e) { return new bootstrap.Toast(e, { delay: 5000 }).show() }) }
+    
+    let myChart = null;
+    async function openAnalysis(btn) {
+        const pid = btn.getAttribute('data-pid');
+        const name = btn.getAttribute('data-name');
+        const desc = btn.getAttribute('data-desc');
+
+        document.getElementById('graphTitle').innerText = name;
+        document.getElementById('graphDesc').innerText = desc || "No description available.";
+        
+        var myModal = new bootstrap.Modal(document.getElementById('analysisModal'));
+        myModal.show();
+
+        if(myChart) myChart.destroy();
+
+        try {
+            const response = await fetch(`/api/history/${pid}`);
+            const data = await response.json();
+            const ctx = document.getElementById('priceChart').getContext('2d');
+            myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.labels,
+                    datasets: [{
+                        label: 'Price ($)',
+                        data: data.prices,
+                        borderColor: '#4f46e5',
+                        backgroundColor: 'rgba(79, 70, 229, 0.1)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: false } } }
+            });
+        } catch (e) { console.log(e); }
+    }
 </script>
-{% endblock %}
+</body>
+</html>

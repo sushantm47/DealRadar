@@ -6,7 +6,7 @@ load_dotenv()
 
 DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_USER = os.getenv("DB_USER", "root")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "")
+DB_PASSWORD = os.getenv("DB_PASSWORD", "") 
 DB_NAME = os.getenv("DB_NAME", "dealradar")
 
 print(f"[LOG] Connecting to MySQL ({DB_HOST})...")
@@ -20,24 +20,23 @@ try:
 
     print("[LOG] Resetting Tables...")
     cursor.execute("SET FOREIGN_KEY_CHECKS = 0;")
-    objects = [
-        "TABLE IF EXISTS Alerts", "TABLE IF EXISTS User_News", "TABLE IF EXISTS Cart", 
-        "TABLE IF EXISTS Seller_Prices", "TABLE IF EXISTS Sellers", "TABLE IF EXISTS Product", 
-        "TABLE IF EXISTS News", "TABLE IF EXISTS Users", 
-        "PROCEDURE IF EXISTS InsertPrice", "TRIGGER IF EXISTS AfterPriceInsert"
-    ]
-    for obj in objects: cursor.execute(f"DROP {obj};")
+    objects = ["Alerts", "Cart", "Seller_Prices", "Sellers", "Product", "News", "Users"]
+    for obj in objects: cursor.execute(f"DROP TABLE IF EXISTS {obj};")
+    cursor.execute("DROP PROCEDURE IF EXISTS InsertPrice;")
+    cursor.execute("DROP TRIGGER IF EXISTS AfterPriceInsert;")
     cursor.execute("SET FOREIGN_KEY_CHECKS = 1;")
 
+    # Define Tables
     tables = [
         """CREATE TABLE Users (
             uid INT AUTO_INCREMENT PRIMARY KEY,
             fname VARCHAR(50), lname VARCHAR(50), 
-            email VARCHAR(100) UNIQUE, pswd VARCHAR(255)
+            email VARCHAR(100) UNIQUE, pswd VARCHAR(255),
+            updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
         );""",
         """CREATE TABLE Product (
             pid INT AUTO_INCREMENT PRIMARY KEY,
-            pname VARCHAR(255), p_description TEXT, p_category VARCHAR(100),
+            pname VARCHAR(255), p_description TEXT, p_category VARCHAR(100), 
             msrp DECIMAL(10, 2) DEFAULT 0.00, tracking_url TEXT
         );""",
         """CREATE TABLE Cart (
@@ -60,6 +59,12 @@ try:
             FOREIGN KEY (pid) REFERENCES Product(pid) ON DELETE CASCADE,
             FOREIGN KEY (spid) REFERENCES Seller_Prices(spid) ON DELETE CASCADE,
             FOREIGN KEY (uid) REFERENCES Users(uid) ON DELETE CASCADE
+        );""",
+        """CREATE TABLE News (
+            nid INT AUTO_INCREMENT PRIMARY KEY,
+            category VARCHAR(100), title VARCHAR(255), n_url VARCHAR(500),
+            image_url TEXT,
+            published_at DATETIME DEFAULT CURRENT_TIMESTAMP
         );"""
     ]
 
@@ -72,8 +77,6 @@ try:
     END
     """)
 
-    # --- THE FIX: SMART TRIGGER ---
-    # Stops duplicate alerts if same price was alerted in last 24h
     cursor.execute("""
     CREATE TRIGGER AfterPriceInsert AFTER INSERT ON Seller_Prices
     FOR EACH ROW
@@ -81,28 +84,27 @@ try:
         INSERT INTO Alerts (pid, spid, uid, active_status)
         SELECT c.pid, NEW.spid, c.uid, TRUE 
         FROM Cart c 
-        WHERE c.pid = NEW.pid 
-        AND NEW.price <= c.cutoff
+        WHERE c.pid = NEW.pid AND NEW.price <= c.cutoff
         AND NOT EXISTS (
-            SELECT 1 FROM Alerts a 
-            JOIN Seller_Prices sp ON a.spid = sp.spid
-            WHERE a.uid = c.uid 
-            AND a.pid = c.pid 
-            AND sp.price = NEW.price
+            SELECT 1 FROM Alerts a JOIN Seller_Prices sp ON a.spid = sp.spid
+            WHERE a.uid = c.uid AND a.pid = c.pid AND sp.price = NEW.price
             AND a.createdat > NOW() - INTERVAL 1 DAY
         );
     END
     """)
 
-    print("[LOG] Inserting Users...")
-    cursor.execute("INSERT INTO Users (fname, lname, email, pswd) VALUES ('Admin', 'User', 'admin@dealradar.com', 'admin@123')")
-    cursor.execute("INSERT INTO Users (fname, lname, email, pswd) VALUES ('John', 'Doe', 'john@example.com', '1234')")
+    print("[LOG] Creating Test User...")
     cursor.execute("INSERT INTO Sellers (sname, s_url) VALUES ('Amazon', 'https://amazon.com')")
-    
+    # Test User: test / test@123
+    cursor.execute("INSERT INTO Users (fname, lname, email, pswd) VALUES ('Test', 'User', 'test', 'test@123')")
+    cursor.execute("INSERT INTO Users (fname, lname, email, pswd) VALUES ('Admin', 'User', 'admin@dealradar.com', 'admin')")
+
     conn.commit()
-    print("🎉 SETUP COMPLETE!")
+    print(" SETUP COMPLETE!")
+    print("   Login: test")
+    print("   Pass:  test@123")
 
 except Exception as e:
-    print(f"\n❌ ERROR: {e}")
+    print(f"\n ERROR: {e}")
 finally:
     if 'conn' in locals() and conn.open: conn.close()

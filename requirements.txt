@@ -1,9 +1,8 @@
-pymysql
-cryptography
-cloudscraper
-beautifulsoup4
-pandas
 flask
-numpy
-python-dotenv
+pymysql
+pandas
 requests
+beautifulsoup4
+feedparser
+python-dotenv
+cloudscraper
