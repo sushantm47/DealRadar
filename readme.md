@@ -41,11 +41,6 @@ cd DealRadar_v2
 ### 2. Install Python Dependencies
 It is recommended to use a virtual environment.
 
-# Create virtual environment (Optional)
-python -m venv venv
-# On Windows use: venv\Scripts\activate
-# On Mac/Linux use: source venv/bin/activate
-
 # Install libraries
 pip install -r requirements.txt
 
@@ -105,29 +100,6 @@ Use the pre-seeded test credentials to access the dashboard:
 
 ### 5. Removing a Product (DELETE)
 1.  Click the "Trash" icon on the product row to remove it from your watchlist.
-
----
-
-## Project Structure
-
-DealRadar/
-│
-├── app.py                 # Main Flask Application Controller
-├── db_manager.py          # Database Helper Functions (CRUD)
-├── scraper.py             # Advanced Amazon Scraper Logic
-├── setup_db.py            # Database Initialization Script
-├── utils.py               # Utility functions (Logging/Sanitization)
-├── requirements.txt       # Python Dependencies
-├── .env                   # Environment Variables (DB Config)
-│
-└── templates/             # Frontend HTML Files
-    ├── base.html          # Base layout (Sidebar, Toasts)
-    ├── dashboard.html     # Main Dashboard UI
-    ├── login.html         # Login Page
-    └── signup.html        # Registration Page
-
----
-
 
 ## User Flow
 
