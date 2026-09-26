@@ -1,8 +1,11 @@
 flask
-pymysql
+psycopg2-binary
 pandas
 requests
 beautifulsoup4
 feedparser
 python-dotenv
 cloudscraper
+streamlit
+anthropic
+pytest

@@ -1,118 +1,142 @@
-CREATE DATABASE IF NOT EXISTS dealradar;
-USE dealradar;
+-- DealRadar schema - PostgreSQL 12+
+-- Run via:  python setup_db.py   (or: psql -d dealradar -f schema.sql)
 
-SET FOREIGN_KEY_CHECKS = 0;
-DROP TABLE IF EXISTS Alerts;
-DROP TABLE IF EXISTS User_News; 
-DROP TABLE IF EXISTS Cart;
-DROP TABLE IF EXISTS Seller_Prices;
-DROP TABLE IF EXISTS Sellers;
-DROP TABLE IF EXISTS Product;
-DROP TABLE IF EXISTS News;
-DROP TABLE IF EXISTS Users;
-DROP PROCEDURE IF EXISTS InsertPrice;
-DROP TRIGGER IF EXISTS AfterPriceInsert;
-SET FOREIGN_KEY_CHECKS = 1;
+-- 1. RESET
+DROP TABLE IF EXISTS Rag_Queries, Rejected_Records, Alerts, Cart, Seller_Prices,
+                     Sellers, News, Product, Users CASCADE;
+DROP PROCEDURE IF EXISTS InsertPrice(INT, INT, NUMERIC, TEXT);
+DROP FUNCTION IF EXISTS after_price_insert() CASCADE;
 
+-- 2. CORE TABLES
 CREATE TABLE Users (
-    uid INT AUTO_INCREMENT PRIMARY KEY,
-    fname VARCHAR(50),
-    lname VARCHAR(50),
-    email VARCHAR(100) UNIQUE,
-    pswd VARCHAR(255),
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    uid        SERIAL PRIMARY KEY,
+    fname      VARCHAR(50),
+    lname      VARCHAR(50),
+    email      VARCHAR(100) UNIQUE,
+    pswd       VARCHAR(255),
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE Product (
-    pid INT AUTO_INCREMENT PRIMARY KEY,
-    pname VARCHAR(255),
+    pid           SERIAL PRIMARY KEY,
+    pname         VARCHAR(255),
     p_description TEXT,
-    p_category VARCHAR(100),
-    msrp DECIMAL(10, 2) DEFAULT 0.00,
-    tracking_url TEXT
+    p_category    VARCHAR(100),
+    msrp          NUMERIC(10, 2) DEFAULT 0.00,
+    tracking_url  TEXT UNIQUE,
+    -- RAG retrieval: full-text index over the product's descriptive fields
+    search_tsv    TSVECTOR GENERATED ALWAYS AS (
+        to_tsvector('english', coalesce(pname, '') || ' ' || coalesce(p_category, '') || ' ' || coalesce(p_description, ''))
+    ) STORED
 );
+CREATE INDEX idx_product_search ON Product USING GIN (search_tsv);
 
 CREATE TABLE Cart (
-    cid INT AUTO_INCREMENT PRIMARY KEY,
-    uid INT,
-    pid INT,
-    cutoff DECIMAL(10, 2),
-    FOREIGN KEY (uid) REFERENCES Users(uid) ON DELETE CASCADE,
-    FOREIGN KEY (pid) REFERENCES Product(pid) ON DELETE CASCADE
+    cid    SERIAL PRIMARY KEY,
+    uid    INT REFERENCES Users(uid) ON DELETE CASCADE,
+    pid    INT REFERENCES Product(pid) ON DELETE CASCADE,
+    cutoff NUMERIC(10, 2)
 );
 
 CREATE TABLE Sellers (
-    sid INT AUTO_INCREMENT PRIMARY KEY,
-    sname VARCHAR(100),
-    saddr VARCHAR(255),
-    s_url VARCHAR(500)
+    sid    SERIAL PRIMARY KEY,
+    sname  VARCHAR(100) UNIQUE NOT NULL,
+    saddr  VARCHAR(255),
+    s_url  VARCHAR(500)
 );
 
 CREATE TABLE Seller_Prices (
-    spid INT AUTO_INCREMENT PRIMARY KEY,
-    pid INT,
-    sid INT,
-    price DECIMAL(10, 2),
-    price_dt DATETIME DEFAULT CURRENT_TIMESTAMP,
-    sp_url VARCHAR(500),
-    FOREIGN KEY (pid) REFERENCES Product(pid) ON DELETE CASCADE,
-    FOREIGN KEY (sid) REFERENCES Sellers(sid) ON DELETE CASCADE
+    spid     SERIAL PRIMARY KEY,
+    pid      INT REFERENCES Product(pid) ON DELETE CASCADE,
+    sid      INT REFERENCES Sellers(sid) ON DELETE CASCADE,
+    price    NUMERIC(10, 2) NOT NULL CHECK (price > 0),   -- last line of defence behind validation.py
+    price_dt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    sp_url   TEXT
 );
+CREATE INDEX idx_prices_pid_dt ON Seller_Prices (pid, price_dt DESC);
 
 CREATE TABLE Alerts (
-    aid INT AUTO_INCREMENT PRIMARY KEY,
-    pid INT,
-    spid INT,
-    uid INT,
-    createdat DATETIME DEFAULT CURRENT_TIMESTAMP,
-    active_status BOOLEAN DEFAULT TRUE,
-    FOREIGN KEY (pid) REFERENCES Product(pid) ON DELETE CASCADE,
-    FOREIGN KEY (spid) REFERENCES Seller_Prices(spid) ON DELETE CASCADE,
-    FOREIGN KEY (uid) REFERENCES Users(uid) ON DELETE CASCADE
+    aid           SERIAL PRIMARY KEY,
+    pid           INT REFERENCES Product(pid) ON DELETE CASCADE,
+    spid          INT REFERENCES Seller_Prices(spid) ON DELETE CASCADE,
+    uid           INT REFERENCES Users(uid) ON DELETE CASCADE,
+    createdat     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    active_status BOOLEAN DEFAULT TRUE
 );
 
 CREATE TABLE News (
-    nid INT AUTO_INCREMENT PRIMARY KEY,
-    category VARCHAR(100),
-    title VARCHAR(255),
-    n_url VARCHAR(500),
-    image_url TEXT,
-    published_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    nid          SERIAL PRIMARY KEY,
+    category     VARCHAR(100),
+    title        TEXT,
+    n_url        VARCHAR(500) UNIQUE,
+    image_url    TEXT,
+    published_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    search_tsv   TSVECTOR GENERATED ALWAYS AS (
+        to_tsvector('english', coalesce(title, '') || ' ' || coalesce(category, ''))
+    ) STORED
+);
+CREATE INDEX idx_news_search ON News USING GIN (search_tsv);
+
+-- 3. PIPELINE + RAG BOOKKEEPING
+-- Every record the validation layer rejects lands here with a reason (never silently dropped)
+CREATE TABLE Rejected_Records (
+    rrid        SERIAL PRIMARY KEY,
+    source      VARCHAR(100),
+    reason      VARCHAR(100),
+    raw_record  JSONB,
+    rejected_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX idx_rejected_reason ON Rejected_Records (reason);
+
+-- Every assistant question, the answer shown, what it cited, and whether it passed grounding checks
+CREATE TABLE Rag_Queries (
+    qid           SERIAL PRIMARY KEY,
+    question      TEXT,
+    answer        TEXT,
+    cited_ids     TEXT[],
+    grounded      BOOLEAN,
+    reject_reason TEXT,
+    model         VARCHAR(100),
+    created_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 3. STORED PROCEDURE & TRIGGER
-DELIMITER //
-
-CREATE PROCEDURE InsertPrice(
-    IN p_pid INT,
-    IN p_sid INT,
-    IN p_price DECIMAL(10,2),
-    IN p_url VARCHAR(500)
-)
+-- 4. STORED PROCEDURE & TRIGGER
+CREATE PROCEDURE InsertPrice(p_pid INT, p_sid INT, p_price NUMERIC, p_url TEXT)
+LANGUAGE plpgsql AS $$
 BEGIN
-    INSERT INTO Seller_Prices (pid, sid, price, sp_url)
-    VALUES (p_pid, p_sid, p_price, p_url);
-END //
+    INSERT INTO Seller_Prices (pid, sid, price, sp_url) VALUES (p_pid, p_sid, p_price, p_url);
+END;
+$$;
 
-CREATE TRIGGER AfterPriceInsert
-AFTER INSERT ON Seller_Prices
-FOR EACH ROW
+CREATE FUNCTION after_price_insert() RETURNS TRIGGER
+LANGUAGE plpgsql AS $$
 BEGIN
     INSERT INTO Alerts (pid, spid, uid, active_status)
     SELECT c.pid, NEW.spid, c.uid, TRUE
     FROM Cart c
     WHERE c.pid = NEW.pid
-    AND NEW.price <= c.cutoff
-    AND NOT EXISTS (
-        SELECT 1 FROM Alerts a JOIN Seller_Prices sp ON a.spid = sp.spid
-        WHERE a.uid = c.uid AND a.pid = c.pid AND sp.price = NEW.price
-        AND a.createdat > NOW() - INTERVAL 1 DAY
-    );
-END //
+      AND NEW.price <= c.cutoff
+      AND NOT EXISTS (
+          SELECT 1 FROM Alerts a JOIN Seller_Prices sp ON a.spid = sp.spid
+          WHERE a.uid = c.uid AND a.pid = c.pid AND sp.price = NEW.price
+            AND a.createdat > NOW() - INTERVAL '1 day'
+      );
+    RETURN NEW;
+END;
+$$;
 
-DELIMITER ;
+CREATE TRIGGER AfterPriceInsert
+AFTER INSERT ON Seller_Prices
+FOR EACH ROW EXECUTE FUNCTION after_price_insert();
 
--- 4. DEFAULT DATA 
-INSERT INTO Sellers (sname, s_url) VALUES ('Amazon', 'https://amazon.com');
+-- 5. DEFAULT DATA
+INSERT INTO Sellers (sname, s_url) VALUES
+    ('Amazon',   'https://www.amazon.com'),
+    ('Best Buy', 'https://www.bestbuy.com'),
+    ('Walmart',  'https://www.walmart.com'),
+    ('Target',   'https://www.target.com'),
+    ('Newegg',   'https://www.newegg.com'),
+    ('eBay',     'https://www.ebay.com');
+
 INSERT INTO Users (fname, lname, email, pswd) VALUES ('Test', 'User', 'test', 'test@123');
 INSERT INTO Users (fname, lname, email, pswd) VALUES ('Admin', 'User', 'admin@dealradar.com', 'admin');
