@@ -1,0 +1,14 @@
+product_url,seller,price,currency,product_name
+https://www.amazon.com/dp/B0BX2L8PBT?ref=deal,Amazon,$329.99,USD,Sony WH-1000XM5 Wireless Headphones
+https://www.bestbuy.com/site/sony-wh1000xm5/6505727.p,Best Buy,349.99,USD,Sony WH-1000XM5 Wireless Headphones
+https://www.walmart.com/ip/apple-airpods-pro-2/1752657021,walmart,"$189.00",USD,Apple AirPods Pro (2nd Gen)
+https://www.target.com/p/apple-airpods-pro-2/-/A-85978612,Target,199.99,,Apple AirPods Pro (2nd Gen)
+https://www.newegg.com/p/N82E16834725144,Newegg,1,099.00,USD,ASUS Zenbook 14 OLED
+https://www.amazon.com/dp/B0CHX1W1XY,Amazon,,USD,Echo Dot 5th Gen
+https://www.amazon.com/dp/B0D1XD1ZV3,Amazon,Currently unavailable,USD,Kindle Paperwhite
+https://www.bestbuy.com/site/lg-c4-65/6578567.p,Amazon,1499.99,USD,LG 65in C4 OLED TV
+https://www.target.com/p/ninja-air-fryer/-/A-83012567,Target,-10.00,USD,Ninja 4qt Air Fryer
+https://www.ebay.com/itm/394857201934,eBay,79.99,GBP,Logitech MX Master 3S
+not-a-url,Walmart,19.99,USD,Mystery Item
+https://www.walmart.com/ip/apple-airpods-pro-2/1752657021,Walmart,187.50,USD,Apple AirPods Pro (2nd Gen)
+https://www.newegg.com/p/N82E16820147861,Newegg,99999.00,USD,Samsung 990 Pro 2TB
